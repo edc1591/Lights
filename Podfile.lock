@@ -1,0 +1,19 @@
+PODS:
+  - PureLayout (2.0.1)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+
+DEPENDENCIES:
+  - PureLayout
+  - ReactiveCocoa
+
+SPEC CHECKSUMS:
+  PureLayout: 12eca5b6dc94f1a03fdf255d640604584ff1b55b
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
+
+COCOAPODS: 0.34.2
