@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  AccessoriesController.h
 //  Lights
 //
 //  Created by Evan Coleman on 11/9/14.
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@interface AccessoriesController : NSObject
 
-@interface ViewController : UIViewController
-
+@property (nonatomic, readonly) NSArray *accessories;
 
 @end
-

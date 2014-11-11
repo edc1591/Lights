@@ -5,4 +5,5 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Lights' do
   pod 'PureLayout'
   pod 'ReactiveCocoa'
+  pod 'libextobjc'
 end

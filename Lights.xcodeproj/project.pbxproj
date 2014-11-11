@@ -1,955 +1,630 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>20DD20B71A10238B0036F12E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>20DD20C21A10238B0036F12E</string>
-				<string>20DD20DC1A10238B0036F12E</string>
-				<string>20DD20C11A10238B0036F12E</string>
-				<string>923A3AF78C4A656389FFDFAB</string>
-				<string>73535C0F1B147EA48B47FE81</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20B81A10238B0036F12E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0610</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Evan Coleman</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>20DD20BF1A10238B0036F12E</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1</string>
-					</dict>
-					<key>20DD20D81A10238B0036F12E</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1</string>
-						<key>TestTargetID</key>
-						<string>20DD20BF1A10238B0036F12E</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>20DD20BB1A10238B0036F12E</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>20DD20B71A10238B0036F12E</string>
-			<key>productRefGroup</key>
-			<string>20DD20C11A10238B0036F12E</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>20DD20BF1A10238B0036F12E</string>
-				<string>20DD20D81A10238B0036F12E</string>
-			</array>
-		</dict>
-		<key>20DD20BB1A10238B0036F12E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>20DD20E11A10238B0036F12E</string>
-				<string>20DD20E21A10238B0036F12E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>20DD20BC1A10238B0036F12E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>20DD20CC1A10238B0036F12E</string>
-				<string>20DD20C91A10238B0036F12E</string>
-				<string>20DD20C61A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>20DD20BD1A10238B0036F12E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8EFF75263827B27A4556D430</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>20DD20BE1A10238B0036F12E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>20DD20CF1A10238B0036F12E</string>
-				<string>20DD20D41A10238B0036F12E</string>
-				<string>20DD20D11A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>20DD20BF1A10238B0036F12E</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>20DD20E31A10238B0036F12E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5D68FD0D3B1FA28EDCC9E803</string>
-				<string>20DD20BC1A10238B0036F12E</string>
-				<string>20DD20BD1A10238B0036F12E</string>
-				<string>20DD20BE1A10238B0036F12E</string>
-				<string>B73BBDB6B9867FDF19CDA033</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Lights</string>
-			<key>productName</key>
-			<string>Lights</string>
-			<key>productReference</key>
-			<string>20DD20C01A10238B0036F12E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>20DD20C01A10238B0036F12E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Lights.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>20DD20C11A10238B0036F12E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>20DD20C01A10238B0036F12E</string>
-				<string>20DD20D91A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20C21A10238B0036F12E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>20DD20C71A10238B0036F12E</string>
-				<string>20DD20C81A10238B0036F12E</string>
-				<string>20DD20CA1A10238B0036F12E</string>
-				<string>20DD20CB1A10238B0036F12E</string>
-				<string>20DD20CD1A10238B0036F12E</string>
-				<string>20DD20D01A10238B0036F12E</string>
-				<string>20DD20D21A10238B0036F12E</string>
-				<string>20DD20C31A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Lights</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20C31A10238B0036F12E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>20DD20C41A10238B0036F12E</string>
-				<string>20DD20C51A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20C41A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20C51A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20C61A10238B0036F12E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>20DD20C51A10238B0036F12E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20DD20C71A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20C81A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20C91A10238B0036F12E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>20DD20C81A10238B0036F12E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20DD20CA1A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20CB1A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20CC1A10238B0036F12E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>20DD20CB1A10238B0036F12E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20DD20CD1A10238B0036F12E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>20DD20CE1A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20CE1A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20CF1A10238B0036F12E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>20DD20CD1A10238B0036F12E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20DD20D01A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20D11A10238B0036F12E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>20DD20D01A10238B0036F12E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20DD20D21A10238B0036F12E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>20DD20D31A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20D31A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20D41A10238B0036F12E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>20DD20D21A10238B0036F12E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20DD20D51A10238B0036F12E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>20DD20E01A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>20DD20D61A10238B0036F12E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>20DD20D71A10238B0036F12E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>20DD20D81A10238B0036F12E</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>20DD20E61A10238B0036F12E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>20DD20D51A10238B0036F12E</string>
-				<string>20DD20D61A10238B0036F12E</string>
-				<string>20DD20D71A10238B0036F12E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>20DD20DB1A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LightsTests</string>
-			<key>productName</key>
-			<string>LightsTests</string>
-			<key>productReference</key>
-			<string>20DD20D91A10238B0036F12E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>20DD20D91A10238B0036F12E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LightsTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>20DD20DA1A10238B0036F12E</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>20DD20B81A10238B0036F12E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>20DD20BF1A10238B0036F12E</string>
-			<key>remoteInfo</key>
-			<string>Lights</string>
-		</dict>
-		<key>20DD20DB1A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>20DD20BF1A10238B0036F12E</string>
-			<key>targetProxy</key>
-			<string>20DD20DA1A10238B0036F12E</string>
-		</dict>
-		<key>20DD20DC1A10238B0036F12E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>20DD20DF1A10238B0036F12E</string>
-				<string>20DD20DD1A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LightsTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20DD1A10238B0036F12E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>20DD20DE1A10238B0036F12E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20DE1A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20DF1A10238B0036F12E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>LightsTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20DD20E01A10238B0036F12E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>20DD20DF1A10238B0036F12E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20DD20E11A10238B0036F12E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>20DD20E21A10238B0036F12E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>20DD20E31A10238B0036F12E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>20DD20E41A10238B0036F12E</string>
-				<string>20DD20E51A10238B0036F12E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>20DD20E41A10238B0036F12E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F6AF39E80B46CD45429D7D37</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Lights/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>20DD20E51A10238B0036F12E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>9AC054FAACDB39111EBCF8F6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Lights/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>20DD20E61A10238B0036F12E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>20DD20E71A10238B0036F12E</string>
-				<string>20DD20E81A10238B0036F12E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>20DD20E71A10238B0036F12E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>LightsTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Lights.app/Lights</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>20DD20E81A10238B0036F12E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>LightsTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Lights.app/Lights</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5D68FD0D3B1FA28EDCC9E803</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>606132ED3E6C3616D16A026C</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-Lights.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>73535C0F1B147EA48B47FE81</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>606132ED3E6C3616D16A026C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8EFF75263827B27A4556D430</key>
-		<dict>
-			<key>fileRef</key>
-			<string>606132ED3E6C3616D16A026C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>923A3AF78C4A656389FFDFAB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F6AF39E80B46CD45429D7D37</string>
-				<string>9AC054FAACDB39111EBCF8F6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9AC054FAACDB39111EBCF8F6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Lights.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Lights/Pods-Lights.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B73BBDB6B9867FDF19CDA033</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Lights/Pods-Lights-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F6AF39E80B46CD45429D7D37</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Lights.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Lights/Pods-Lights.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>20DD20B81A10238B0036F12E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20DD20C61A10238B0036F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C51A10238B0036F12E /* main.m */; };
+		20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C81A10238B0036F12E /* AppDelegate.m */; };
+		20DD20D11A10238B0036F12E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DD20D01A10238B0036F12E /* Images.xcassets */; };
+		20DD20D41A10238B0036F12E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20DD20D21A10238B0036F12E /* LaunchScreen.xib */; };
+		20DD20E01A10238B0036F12E /* LightsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20DF1A10238B0036F12E /* LightsTests.m */; };
+		20DD20F01A1024C20036F12E /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DD20EF1A1024C20036F12E /* HomeKit.framework */; };
+		20DD20F41A1025830036F12E /* HMHomeManager+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20F31A1025830036F12E /* HMHomeManager+RACSignalSupport.m */; };
+		20DD20F91A1025B10036F12E /* HMHome+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20F81A1025B10036F12E /* HMHome+RACSignalSupport.m */; };
+		20DD20FC1A1025E70036F12E /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20FB1A1025E70036F12E /* RoomsViewController.m */; };
+		20DD20FF1A1025F10036F12E /* HomesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20FE1A1025F10036F12E /* HomesViewController.m */; };
+		20DD21021A1026100036F12E /* HomesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21011A1026100036F12E /* HomesViewModel.m */; };
+		20DD21051A10261A0036F12E /* RoomsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21041A10261A0036F12E /* RoomsViewModel.m */; };
+		20DD21081A1027610036F12E /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21071A1027610036F12E /* HomeController.m */; };
+		20DD210B1A102E540036F12E /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD210A1A102E540036F12E /* HomeViewModel.m */; };
+		20DD210F1A10326D0036F12E /* EmptyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD210E1A10326D0036F12E /* EmptyViewModel.m */; };
+		20DD21121A104ED60036F12E /* RoomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21111A104ED60036F12E /* RoomViewModel.m */; };
+		20DD21151A1059C20036F12E /* AccessoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21141A1059C20036F12E /* AccessoriesViewController.m */; };
+		20DD21181A1059F30036F12E /* AccessoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21171A1059F30036F12E /* AccessoriesViewModel.m */; };
+		20DD211B1A105A450036F12E /* AccessoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD211A1A105A450036F12E /* AccessoriesController.m */; };
+		20DD211E1A105C8E0036F12E /* AccessoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD211D1A105C8E0036F12E /* AccessoryViewModel.m */; };
+		20DD21211A11B0B40036F12E /* HomesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21201A11B0B40036F12E /* HomesController.m */; };
+		8EFF75263827B27A4556D430 /* libPods-Lights.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606132ED3E6C3616D16A026C /* libPods-Lights.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20DD20DA1A10238B0036F12E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20DD20B81A10238B0036F12E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20DD20BF1A10238B0036F12E;
+			remoteInfo = Lights;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20DD20C01A10238B0036F12E /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20DD20C41A10238B0036F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20DD20C51A10238B0036F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20DD20C71A10238B0036F12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		20DD20C81A10238B0036F12E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		20DD20D01A10238B0036F12E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		20DD20D31A10238B0036F12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		20DD20D91A10238B0036F12E /* LightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20DD20DE1A10238B0036F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20DD20DF1A10238B0036F12E /* LightsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightsTests.m; sourceTree = "<group>"; };
+		20DD20E91A1024700036F12E /* Lights-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lights-Prefix.pch"; sourceTree = "<group>"; };
+		20DD20EF1A1024C20036F12E /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		20DD20F11A1024C20036F12E /* Lights.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Lights.entitlements; sourceTree = "<group>"; };
+		20DD20F21A1025830036F12E /* HMHomeManager+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMHomeManager+RACSignalSupport.h"; sourceTree = "<group>"; };
+		20DD20F31A1025830036F12E /* HMHomeManager+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMHomeManager+RACSignalSupport.m"; sourceTree = "<group>"; };
+		20DD20F71A1025B10036F12E /* HMHome+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMHome+RACSignalSupport.h"; sourceTree = "<group>"; };
+		20DD20F81A1025B10036F12E /* HMHome+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMHome+RACSignalSupport.m"; sourceTree = "<group>"; };
+		20DD20FA1A1025E70036F12E /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
+		20DD20FB1A1025E70036F12E /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
+		20DD20FD1A1025F10036F12E /* HomesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomesViewController.h; sourceTree = "<group>"; };
+		20DD20FE1A1025F10036F12E /* HomesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomesViewController.m; sourceTree = "<group>"; };
+		20DD21001A1026100036F12E /* HomesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomesViewModel.h; sourceTree = "<group>"; };
+		20DD21011A1026100036F12E /* HomesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomesViewModel.m; sourceTree = "<group>"; };
+		20DD21031A10261A0036F12E /* RoomsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewModel.h; sourceTree = "<group>"; };
+		20DD21041A10261A0036F12E /* RoomsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewModel.m; sourceTree = "<group>"; };
+		20DD21061A1027610036F12E /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		20DD21071A1027610036F12E /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		20DD21091A102E540036F12E /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
+		20DD210A1A102E540036F12E /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		20DD210D1A10326D0036F12E /* EmptyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyViewModel.h; sourceTree = "<group>"; };
+		20DD210E1A10326D0036F12E /* EmptyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyViewModel.m; sourceTree = "<group>"; };
+		20DD21101A104ED60036F12E /* RoomViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewModel.h; sourceTree = "<group>"; };
+		20DD21111A104ED60036F12E /* RoomViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewModel.m; sourceTree = "<group>"; };
+		20DD21131A1059C20036F12E /* AccessoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoriesViewController.h; sourceTree = "<group>"; };
+		20DD21141A1059C20036F12E /* AccessoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoriesViewController.m; sourceTree = "<group>"; };
+		20DD21161A1059F30036F12E /* AccessoriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoriesViewModel.h; sourceTree = "<group>"; };
+		20DD21171A1059F30036F12E /* AccessoriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoriesViewModel.m; sourceTree = "<group>"; };
+		20DD21191A105A450036F12E /* AccessoriesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoriesController.h; sourceTree = "<group>"; };
+		20DD211A1A105A450036F12E /* AccessoriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoriesController.m; sourceTree = "<group>"; };
+		20DD211C1A105C8E0036F12E /* AccessoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryViewModel.h; sourceTree = "<group>"; };
+		20DD211D1A105C8E0036F12E /* AccessoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryViewModel.m; sourceTree = "<group>"; };
+		20DD211F1A11B0B40036F12E /* HomesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomesController.h; sourceTree = "<group>"; };
+		20DD21201A11B0B40036F12E /* HomesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomesController.m; sourceTree = "<group>"; };
+		606132ED3E6C3616D16A026C /* libPods-Lights.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lights.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6840377B50A259D5BF426DD4 /* Pods-Lights.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lights.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lights/Pods-Lights.release.xcconfig"; sourceTree = "<group>"; };
+		DF7F4602DA4F4BFDEA8E4603 /* Pods-Lights.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lights.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lights/Pods-Lights.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20DD20BD1A10238B0036F12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20DD20F01A1024C20036F12E /* HomeKit.framework in Frameworks */,
+				8EFF75263827B27A4556D430 /* libPods-Lights.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20DD20D61A10238B0036F12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20DD20B71A10238B0036F12E = {
+			isa = PBXGroup;
+			children = (
+				20DD20C21A10238B0036F12E /* Lights */,
+				20DD20DC1A10238B0036F12E /* LightsTests */,
+				20DD20C11A10238B0036F12E /* Products */,
+				73535C0F1B147EA48B47FE81 /* Frameworks */,
+				49E7B638D76EE21D2E866169 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		20DD20C11A10238B0036F12E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20C01A10238B0036F12E /* Lights.app */,
+				20DD20D91A10238B0036F12E /* LightsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20DD20C21A10238B0036F12E /* Lights */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20F11A1024C20036F12E /* Lights.entitlements */,
+				20DD20C71A10238B0036F12E /* AppDelegate.h */,
+				20DD20C81A10238B0036F12E /* AppDelegate.m */,
+				20DD20EE1A1024B50036F12E /* UI */,
+				20DD20EB1A10249F0036F12E /* View Models */,
+				20DD20EA1A1024980036F12E /* Data Sources */,
+				20DD20EC1A1024A70036F12E /* Utilities */,
+				20DD20D01A10238B0036F12E /* Images.xcassets */,
+				20DD20D21A10238B0036F12E /* LaunchScreen.xib */,
+				20DD20C31A10238B0036F12E /* Supporting Files */,
+			);
+			path = Lights;
+			sourceTree = "<group>";
+		};
+		20DD20C31A10238B0036F12E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20C41A10238B0036F12E /* Info.plist */,
+				20DD20C51A10238B0036F12E /* main.m */,
+				20DD20E91A1024700036F12E /* Lights-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20DD20DC1A10238B0036F12E /* LightsTests */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20DF1A10238B0036F12E /* LightsTests.m */,
+				20DD20DD1A10238B0036F12E /* Supporting Files */,
+			);
+			path = LightsTests;
+			sourceTree = "<group>";
+		};
+		20DD20DD1A10238B0036F12E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20DE1A10238B0036F12E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20DD20EA1A1024980036F12E /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				20DD211F1A11B0B40036F12E /* HomesController.h */,
+				20DD21201A11B0B40036F12E /* HomesController.m */,
+				20DD21061A1027610036F12E /* HomeController.h */,
+				20DD21071A1027610036F12E /* HomeController.m */,
+				20DD21191A105A450036F12E /* AccessoriesController.h */,
+				20DD211A1A105A450036F12E /* AccessoriesController.m */,
+			);
+			name = "Data Sources";
+			sourceTree = "<group>";
+		};
+		20DD20EB1A10249F0036F12E /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				20DD210C1A10325C0036F12E /* Generic */,
+				20DD21001A1026100036F12E /* HomesViewModel.h */,
+				20DD21011A1026100036F12E /* HomesViewModel.m */,
+				20DD21031A10261A0036F12E /* RoomsViewModel.h */,
+				20DD21041A10261A0036F12E /* RoomsViewModel.m */,
+				20DD21161A1059F30036F12E /* AccessoriesViewModel.h */,
+				20DD21171A1059F30036F12E /* AccessoriesViewModel.m */,
+				20DD21091A102E540036F12E /* HomeViewModel.h */,
+				20DD210A1A102E540036F12E /* HomeViewModel.m */,
+				20DD21101A104ED60036F12E /* RoomViewModel.h */,
+				20DD21111A104ED60036F12E /* RoomViewModel.m */,
+				20DD211C1A105C8E0036F12E /* AccessoryViewModel.h */,
+				20DD211D1A105C8E0036F12E /* AccessoryViewModel.m */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		20DD20EC1A1024A70036F12E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20ED1A1024AE0036F12E /* RACSignalSupport */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		20DD20ED1A1024AE0036F12E /* RACSignalSupport */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20F21A1025830036F12E /* HMHomeManager+RACSignalSupport.h */,
+				20DD20F31A1025830036F12E /* HMHomeManager+RACSignalSupport.m */,
+				20DD20F71A1025B10036F12E /* HMHome+RACSignalSupport.h */,
+				20DD20F81A1025B10036F12E /* HMHome+RACSignalSupport.m */,
+			);
+			name = RACSignalSupport;
+			sourceTree = "<group>";
+		};
+		20DD20EE1A1024B50036F12E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20FD1A1025F10036F12E /* HomesViewController.h */,
+				20DD20FE1A1025F10036F12E /* HomesViewController.m */,
+				20DD20FA1A1025E70036F12E /* RoomsViewController.h */,
+				20DD20FB1A1025E70036F12E /* RoomsViewController.m */,
+				20DD21131A1059C20036F12E /* AccessoriesViewController.h */,
+				20DD21141A1059C20036F12E /* AccessoriesViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		20DD210C1A10325C0036F12E /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				20DD210D1A10326D0036F12E /* EmptyViewModel.h */,
+				20DD210E1A10326D0036F12E /* EmptyViewModel.m */,
+			);
+			name = Generic;
+			sourceTree = "<group>";
+		};
+		49E7B638D76EE21D2E866169 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF7F4602DA4F4BFDEA8E4603 /* Pods-Lights.debug.xcconfig */,
+				6840377B50A259D5BF426DD4 /* Pods-Lights.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		73535C0F1B147EA48B47FE81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20DD20EF1A1024C20036F12E /* HomeKit.framework */,
+				606132ED3E6C3616D16A026C /* libPods-Lights.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20DD20BF1A10238B0036F12E /* Lights */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20DD20E31A10238B0036F12E /* Build configuration list for PBXNativeTarget "Lights" */;
+			buildPhases = (
+				5D68FD0D3B1FA28EDCC9E803 /* Check Pods Manifest.lock */,
+				20DD20BC1A10238B0036F12E /* Sources */,
+				20DD20BD1A10238B0036F12E /* Frameworks */,
+				20DD20BE1A10238B0036F12E /* Resources */,
+				B73BBDB6B9867FDF19CDA033 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lights;
+			productName = Lights;
+			productReference = 20DD20C01A10238B0036F12E /* Lights.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20DD20D81A10238B0036F12E /* LightsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20DD20E61A10238B0036F12E /* Build configuration list for PBXNativeTarget "LightsTests" */;
+			buildPhases = (
+				20DD20D51A10238B0036F12E /* Sources */,
+				20DD20D61A10238B0036F12E /* Frameworks */,
+				20DD20D71A10238B0036F12E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20DD20DB1A10238B0036F12E /* PBXTargetDependency */,
+			);
+			name = LightsTests;
+			productName = LightsTests;
+			productReference = 20DD20D91A10238B0036F12E /* LightsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20DD20B81A10238B0036F12E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Evan Coleman";
+				TargetAttributes = {
+					20DD20BF1A10238B0036F12E = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 52M9C6892K;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
+					};
+					20DD20D81A10238B0036F12E = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 20DD20BF1A10238B0036F12E;
+					};
+				};
+			};
+			buildConfigurationList = 20DD20BB1A10238B0036F12E /* Build configuration list for PBXProject "Lights" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20DD20B71A10238B0036F12E;
+			productRefGroup = 20DD20C11A10238B0036F12E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20DD20BF1A10238B0036F12E /* Lights */,
+				20DD20D81A10238B0036F12E /* LightsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20DD20BE1A10238B0036F12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20DD20D41A10238B0036F12E /* LaunchScreen.xib in Resources */,
+				20DD20D11A10238B0036F12E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20DD20D71A10238B0036F12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D68FD0D3B1FA28EDCC9E803 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B73BBDB6B9867FDF19CDA033 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lights/Pods-Lights-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20DD20BC1A10238B0036F12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20DD21021A1026100036F12E /* HomesViewModel.m in Sources */,
+				20DD211B1A105A450036F12E /* AccessoriesController.m in Sources */,
+				20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */,
+				20DD20C61A10238B0036F12E /* main.m in Sources */,
+				20DD21151A1059C20036F12E /* AccessoriesViewController.m in Sources */,
+				20DD21121A104ED60036F12E /* RoomViewModel.m in Sources */,
+				20DD210F1A10326D0036F12E /* EmptyViewModel.m in Sources */,
+				20DD211E1A105C8E0036F12E /* AccessoryViewModel.m in Sources */,
+				20DD210B1A102E540036F12E /* HomeViewModel.m in Sources */,
+				20DD20F91A1025B10036F12E /* HMHome+RACSignalSupport.m in Sources */,
+				20DD21051A10261A0036F12E /* RoomsViewModel.m in Sources */,
+				20DD21181A1059F30036F12E /* AccessoriesViewModel.m in Sources */,
+				20DD20FC1A1025E70036F12E /* RoomsViewController.m in Sources */,
+				20DD20F41A1025830036F12E /* HMHomeManager+RACSignalSupport.m in Sources */,
+				20DD21081A1027610036F12E /* HomeController.m in Sources */,
+				20DD20FF1A1025F10036F12E /* HomesViewController.m in Sources */,
+				20DD21211A11B0B40036F12E /* HomesController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20DD20D51A10238B0036F12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20DD20E01A10238B0036F12E /* LightsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20DD20DB1A10238B0036F12E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20DD20BF1A10238B0036F12E /* Lights */;
+			targetProxy = 20DD20DA1A10238B0036F12E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20DD20D21A10238B0036F12E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20DD20D31A10238B0036F12E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20DD20E11A10238B0036F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20DD20E21A10238B0036F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20DD20E41A10238B0036F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7F4602DA4F4BFDEA8E4603 /* Pods-Lights.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lights/Lights.entitlements;
+				GCC_PREFIX_HEADER = "Lights/Lights-Prefix.pch";
+				INFOPLIST_FILE = Lights/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		20DD20E51A10238B0036F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6840377B50A259D5BF426DD4 /* Pods-Lights.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lights/Lights.entitlements;
+				GCC_PREFIX_HEADER = "Lights/Lights-Prefix.pch";
+				INFOPLIST_FILE = Lights/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		20DD20E71A10238B0036F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LightsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lights.app/Lights";
+			};
+			name = Debug;
+		};
+		20DD20E81A10238B0036F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LightsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lights.app/Lights";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20DD20BB1A10238B0036F12E /* Build configuration list for PBXProject "Lights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20DD20E11A10238B0036F12E /* Debug */,
+				20DD20E21A10238B0036F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20DD20E31A10238B0036F12E /* Build configuration list for PBXNativeTarget "Lights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20DD20E41A10238B0036F12E /* Debug */,
+				20DD20E51A10238B0036F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20DD20E61A10238B0036F12E /* Build configuration list for PBXNativeTarget "LightsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20DD20E71A10238B0036F12E /* Debug */,
+				20DD20E81A10238B0036F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20DD20B81A10238B0036F12E /* Project object */;
+}

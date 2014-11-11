@@ -8,6 +8,12 @@
 
 #import "AppDelegate.h"
 
+#import "HomesViewController.h"
+
+#import "HomesViewModel.h"
+
+#import "HomesController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +22,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    HomesController *homesController = [[HomesController alloc] init];
+    HomesViewModel *homesViewModel = [[HomesViewModel alloc] initWithHomesController:homesController];
+    HomesViewController *homesViewController = [[HomesViewController alloc] initWithViewModel:homesViewModel];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:homesViewController];
+    self.window.rootViewController = navigationController;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
