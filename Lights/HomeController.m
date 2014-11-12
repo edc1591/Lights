@@ -27,14 +27,6 @@
         
         _rooms = _home.rooms;
         _accessories = _home.accessories;
-        
-//        [[[self rac_signalForSelector:@selector(home:didUpdateRoom:forAccessory:) fromProtocol:@protocol(HMHomeDelegate)]
-//            reduceEach:^HMRoom *(HMHome *_, HMRoom *room, HMAccessory *__){
-//                return room;
-//            }]
-//            subscribeNext:^(HMRoom *room) {
-//                [room didChangeValueForKey:@"accessories"];
-//            }];
     }
     return self;
 }
