@@ -12,14 +12,28 @@
 
 #import "HomeController.h"
 
+@interface AccessoryViewModel () <HMAccessoryDelegate>
+
+@property (nonatomic) NSString *name;
+@property (nonatomic) UIColor *statusColor;
+
+@end
+
 @implementation AccessoryViewModel
 
 - (instancetype)initWithAccessory:(HMAccessory *)accessory homeController:(HomeController *)homeController {
     self = [super init];
     if (self != nil) {
         _accessory = accessory;
+        _accessory.delegate = self;
         
-        _name = accessory.name;
+        RAC(self, name) = RACObserve(self.accessory, name);
+        
+        RAC(self, statusColor) =
+            [RACObserve(self.accessory, reachable)
+                map:^UIColor *(NSNumber *reachable) {
+                    return [reachable boolValue] ? [UIColor blackColor] : [UIColor redColor];
+                }];
         
         @weakify(self);
         _pairAccessoryCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(RoomViewModel *roomViewModel) {

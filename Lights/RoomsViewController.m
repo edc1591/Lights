@@ -9,6 +9,8 @@
 #import "RoomsViewController.h"
 
 #import "AccessoriesViewController.h"
+#import "AccessoryCell.h"
+#import "RoomHeaderView.h"
 
 #import "HomeViewModel.h"
 #import "RoomsViewModel.h"
@@ -17,6 +19,8 @@
 #import "AccessoriesViewModel.h"
 
 @interface RoomsViewController ()
+
+@property (nonatomic, readonly) RoomHeaderView *mockHeaderView;
 
 @end
 
@@ -28,6 +32,8 @@
         _viewModel = viewModel;
         
         self.title = viewModel.homeName;
+        
+        _mockHeaderView = [[RoomHeaderView alloc] init];
     }
     return self;
 }
@@ -35,7 +41,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"DeviceCell"];
+    [self.tableView registerClass:[AccessoryCell class] forCellReuseIdentifier:NSStringFromClass([AccessoryCell class])];
+    [self.tableView registerClass:[RoomHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([RoomHeaderView class])];
     
     @weakify(self);
     UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Add Room", nil) style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -86,7 +93,27 @@
     [self.navigationController setToolbarHidden:YES];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
+    AccessoryViewModel *accessoryViewModel = roomViewModel.viewModels[indexPath.row];
+    
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    RoomHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([RoomHeaderView class])];
+    
+    headerView.viewModel = self.viewModel.viewModels[section];
+    
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return [self.mockHeaderView sizeThatFits:CGSizeMake(CGRectGetWidth(tableView.bounds), CGFLOAT_MAX)].height;
+}
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.viewModel.viewModels count];
@@ -97,17 +124,12 @@
     return [roomViewModel.viewModels count];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    RoomViewModel *roomViewModel = self.viewModel.viewModels[section];
-    return roomViewModel.name;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceCell" forIndexPath:indexPath];
+    AccessoryCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AccessoryCell class]) forIndexPath:indexPath];
     
     RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
     AccessoryViewModel *accessoryViewModel = roomViewModel.viewModels[indexPath.row];
-    cell.textLabel.text = accessoryViewModel.name;
+    cell.viewModel = accessoryViewModel;
     
     return cell;
 }

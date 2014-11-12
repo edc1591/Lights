@@ -28,6 +28,9 @@
 		20DD211B1A105A450036F12E /* AccessoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD211A1A105A450036F12E /* AccessoriesController.m */; };
 		20DD211E1A105C8E0036F12E /* AccessoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD211D1A105C8E0036F12E /* AccessoryViewModel.m */; };
 		20DD21211A11B0B40036F12E /* HomesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21201A11B0B40036F12E /* HomesController.m */; };
+		20DD21251A12FF3F0036F12E /* RoomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21241A12FF3F0036F12E /* RoomHeaderView.m */; };
+		20DD21281A13027F0036F12E /* AccessoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21271A13027F0036F12E /* AccessoryCell.m */; };
+		20DD212B1A130CBC0036F12E /* UIFont+Lights.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD212A1A130CBC0036F12E /* UIFont+Lights.m */; };
 		8EFF75263827B27A4556D430 /* libPods-Lights.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606132ED3E6C3616D16A026C /* libPods-Lights.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,12 @@
 		20DD211D1A105C8E0036F12E /* AccessoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryViewModel.m; sourceTree = "<group>"; };
 		20DD211F1A11B0B40036F12E /* HomesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomesController.h; sourceTree = "<group>"; };
 		20DD21201A11B0B40036F12E /* HomesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomesController.m; sourceTree = "<group>"; };
+		20DD21231A12FF3F0036F12E /* RoomHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomHeaderView.h; sourceTree = "<group>"; };
+		20DD21241A12FF3F0036F12E /* RoomHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomHeaderView.m; sourceTree = "<group>"; };
+		20DD21261A13027F0036F12E /* AccessoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryCell.h; sourceTree = "<group>"; };
+		20DD21271A13027F0036F12E /* AccessoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryCell.m; sourceTree = "<group>"; };
+		20DD21291A130CBC0036F12E /* UIFont+Lights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Lights.h"; sourceTree = "<group>"; };
+		20DD212A1A130CBC0036F12E /* UIFont+Lights.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Lights.m"; sourceTree = "<group>"; };
 		606132ED3E6C3616D16A026C /* libPods-Lights.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lights.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6840377B50A259D5BF426DD4 /* Pods-Lights.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lights.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lights/Pods-Lights.release.xcconfig"; sourceTree = "<group>"; };
 		DF7F4602DA4F4BFDEA8E4603 /* Pods-Lights.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lights.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lights/Pods-Lights.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				20DD20ED1A1024AE0036F12E /* RACSignalSupport */,
+				20DD21291A130CBC0036F12E /* UIFont+Lights.h */,
+				20DD212A1A130CBC0036F12E /* UIFont+Lights.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -235,6 +246,7 @@
 				20DD20FB1A1025E70036F12E /* RoomsViewController.m */,
 				20DD21131A1059C20036F12E /* AccessoriesViewController.h */,
 				20DD21141A1059C20036F12E /* AccessoriesViewController.m */,
+				20DD21221A12FF140036F12E /* Table View Cells */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -246,6 +258,17 @@
 				20DD210E1A10326D0036F12E /* EmptyViewModel.m */,
 			);
 			name = Generic;
+			sourceTree = "<group>";
+		};
+		20DD21221A12FF140036F12E /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				20DD21231A12FF3F0036F12E /* RoomHeaderView.h */,
+				20DD21241A12FF3F0036F12E /* RoomHeaderView.m */,
+				20DD21261A13027F0036F12E /* AccessoryCell.h */,
+				20DD21271A13027F0036F12E /* AccessoryCell.m */,
+			);
+			name = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		49E7B638D76EE21D2E866169 /* Pods */ = {
@@ -406,13 +429,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DD21281A13027F0036F12E /* AccessoryCell.m in Sources */,
 				20DD21021A1026100036F12E /* HomesViewModel.m in Sources */,
 				20DD211B1A105A450036F12E /* AccessoriesController.m in Sources */,
 				20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */,
 				20DD20C61A10238B0036F12E /* main.m in Sources */,
 				20DD21151A1059C20036F12E /* AccessoriesViewController.m in Sources */,
 				20DD21121A104ED60036F12E /* RoomViewModel.m in Sources */,
+				20DD21251A12FF3F0036F12E /* RoomHeaderView.m in Sources */,
 				20DD210F1A10326D0036F12E /* EmptyViewModel.m in Sources */,
+				20DD212B1A130CBC0036F12E /* UIFont+Lights.m in Sources */,
 				20DD211E1A105C8E0036F12E /* AccessoryViewModel.m in Sources */,
 				20DD210B1A102E540036F12E /* HomeViewModel.m in Sources */,
 				20DD20F91A1025B10036F12E /* HMHome+RACSignalSupport.m in Sources */,

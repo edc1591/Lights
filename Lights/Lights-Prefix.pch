@@ -16,4 +16,6 @@
 #import <PureLayout/PureLayout.h>
 #import <EXTScope.h>
 
+#import "UIFont+Lights.h"
+
 #endif
