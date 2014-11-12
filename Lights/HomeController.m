@@ -25,21 +25,8 @@
         _home = home;
         _home.delegate = self;
         
-        RAC(self, rooms) =
-            [[[RACSignal merge:@[[self rac_signalForSelector:@selector(home:didAddRoom:) fromProtocol:@protocol(HMHomeDelegate)],
-                                [self rac_signalForSelector:@selector(home:didRemoveRoom:) fromProtocol:@protocol(HMHomeDelegate)]]]
-                reduceEach:^NSArray *(HMHome *home, HMRoom *_){
-                    return home.rooms;
-                }]
-                startWith:_home.rooms];
-        
-        RAC(self, accessories) =
-            [[[RACSignal merge:@[[self rac_signalForSelector:@selector(home:didAddAccessory:) fromProtocol:@protocol(HMHomeDelegate)],
-                                [self rac_signalForSelector:@selector(home:didRemoveAccessory:) fromProtocol:@protocol(HMHomeDelegate)]]]
-                reduceEach:^NSArray *(HMHome *home, HMAccessory *_){
-                    return home.accessories;
-                }]
-                startWith:_home.accessories];
+        _rooms = _home.rooms;
+        _accessories = _home.accessories;
         
 //        [[[self rac_signalForSelector:@selector(home:didUpdateRoom:forAccessory:) fromProtocol:@protocol(HMHomeDelegate)]
 //            reduceEach:^HMRoom *(HMHome *_, HMRoom *room, HMAccessory *__){
@@ -57,26 +44,43 @@
 }
 
 - (RACSignal *)addRoom:(NSString *)name {
-    return [self.home rac_addRoomWithName:name];
+    @weakify(self);
+    return [[self.home rac_addRoomWithName:name]
+                doCompleted:^{
+                    @strongify(self);
+                    self.rooms = self.home.rooms;
+                }];
 }
 
 - (RACSignal *)removeRoom:(HMRoom *)room {
-    return [self.home rac_removeRoom:room];
+    @weakify(self);
+    return [[self.home rac_removeRoom:room]
+                doCompleted:^{
+                    @strongify(self);
+                    self.rooms = self.home.rooms;
+                }];
 }
 
 - (RACSignal *)addAccessory:(HMAccessory *)accessory {
-    return [self.home rac_addAccessory:accessory];
+    @weakify(self);
+    return [[self.home rac_addAccessory:accessory]
+                doCompleted:^{
+                    @strongify(self);
+                    self.accessories = self.home.accessories;
+                }];
 }
 
 - (RACSignal *)assignAccessory:(HMAccessory *)accessory toRoom:(HMRoom *)room {
-    return [self.home rac_assignAccessory:accessory toRoom:room];
+    [room willChangeValueForKey:@keypath(room, accessories)];
+    return [[self.home rac_assignAccessory:accessory toRoom:room]
+                doCompleted:^{
+                    [room didChangeValueForKey:@keypath(room, accessories)];
+                }];
 }
 
 #pragma mark HMHomeDelegate
 
-- (void)home:(HMHome *)home didAddRoom:(HMRoom *)room toZone:(HMZone *)zone {
-    
-}
+- (void)home:(HMHome *)home didAddRoom:(HMRoom *)room toZone:(HMZone *)zone { }
 - (void)home:(HMHome *)home didRemoveRoom:(HMRoom *)room { }
 - (void)home:(HMHome *)home didAddAccessory:(HMAccessory *)accessory { }
 - (void)home:(HMHome *)home didRemoveAccessory:(HMAccessory *)accessory { }

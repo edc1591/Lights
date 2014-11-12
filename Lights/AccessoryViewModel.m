@@ -24,9 +24,14 @@
         @weakify(self);
         _pairAccessoryCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(RoomViewModel *roomViewModel) {
             @strongify(self);
-            return [[homeController addAccessory:self.accessory]
-                        flattenMap:^RACSignal *(id _) {
-                            return [homeController assignAccessory:self.accessory toRoom:roomViewModel.room];
+            return [[[homeController addAccessory:self.accessory]
+                        materialize]
+                        flattenMap:^RACSignal *(RACEvent *event) {
+                            if (event.eventType == RACEventTypeCompleted) {
+                                return [homeController assignAccessory:self.accessory toRoom:roomViewModel.room];
+                            } else {
+                                return [RACSignal error:event.error];
+                            }
                         }];
         }];
     }
