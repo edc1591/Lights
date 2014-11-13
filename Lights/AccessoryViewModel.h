@@ -17,6 +17,9 @@
 
 @property (nonatomic, readonly) RACCommand *pairAccessoryCommand;
 
+@property (nonatomic, readonly) RACCommand *onCommand;
+@property (nonatomic, readonly) RACCommand *offCommand;
+
 - (instancetype)initWithAccessory:(HMAccessory *)accessory homeController:(HomeController *)homeController;
 
 @end

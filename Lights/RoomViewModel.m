@@ -36,6 +36,33 @@
                                 }]
                                 array];
                 }];
+        
+        @weakify(self);
+        _onCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
+            @strongify(self);
+            return [[[[self.viewModels.rac_sequence
+                        map:^RACCommand *(AccessoryViewModel *viewModel) {
+                            return viewModel.onCommand;
+                        }]
+                        signal]
+                        flattenMap:^RACSignal *(RACCommand *command) {
+                            return [command execute:nil];
+                        }]
+                        flatten];
+        }];
+        
+        _offCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
+            @strongify(self);
+            return [[[[self.viewModels.rac_sequence
+                        map:^RACCommand *(AccessoryViewModel *viewModel) {
+                            return viewModel.offCommand;
+                        }]
+                        signal]
+                        flattenMap:^RACSignal *(RACCommand *command) {
+                            return [command execute:nil];
+                        }]
+                        flatten];
+        }];
     }
     return self;
 }

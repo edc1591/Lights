@@ -12,6 +12,9 @@
 
 #import "HomeController.h"
 
+#import "HMAccessory+RACSignalSupport.h"
+#import "HMCharacteristic+RACSignalSupport.h"
+
 @interface AccessoryViewModel () <HMAccessoryDelegate>
 
 @property (nonatomic) NSString *name;
@@ -46,6 +49,22 @@
                             } else {
                                 return [RACSignal error:event.error];
                             }
+                        }];
+        }];
+        
+        _onCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
+            @strongify(self);
+            return [[self.accessory rac_powerCharacteristic]
+                        flattenMap:^RACSignal *(HMCharacteristic *characteristic) {
+                            return [characteristic rac_writeValue:@YES];
+                        }];
+        }];
+        
+        _offCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
+            @strongify(self);
+            return [[self.accessory rac_powerCharacteristic]
+                        flattenMap:^RACSignal *(HMCharacteristic *characteristic) {
+                            return [characteristic rac_writeValue:@NO];
                         }];
         }];
     }

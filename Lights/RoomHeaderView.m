@@ -70,4 +70,11 @@
     return CGSizeMake(size.width, 38);
 }
 
+- (void)setViewModel:(RoomViewModel *)viewModel {
+    _viewModel = viewModel;
+    
+    self.onButton.rac_command = viewModel.onCommand;
+    self.offButton.rac_command = viewModel.offCommand;
+}
+
 @end

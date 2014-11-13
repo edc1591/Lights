@@ -1,4 +1,5 @@
 PODS:
+  - ChameleonFramework (1.1.1)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT
     - libextobjc/EXTConcreteProtocol
@@ -34,6 +35,7 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
+  - MCSwipeTableViewCell (2.1.2)
   - PureLayout (2.0.1)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI
@@ -44,12 +46,16 @@ PODS:
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
+  - ChameleonFramework
   - libextobjc
+  - MCSwipeTableViewCell
   - PureLayout
   - ReactiveCocoa
 
 SPEC CHECKSUMS:
+  ChameleonFramework: c60096686e3771f5d78f26cfbfd08955a8a88cbd
   libextobjc: d6146fce3ebea986b7f75fcb4c967639200b88b0
+  MCSwipeTableViewCell: 8e78ff197ab06ba7bfd5c938a00149de8a33afa9
   PureLayout: 12eca5b6dc94f1a03fdf255d640604584ff1b55b
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
 

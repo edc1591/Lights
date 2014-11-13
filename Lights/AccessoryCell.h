@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
+#import <MCSwipeTableViewCell/MCSwipeTableViewCell.h>
+
 @class AccessoryViewModel;
 
-@interface AccessoryCell : UITableViewCell
+@interface AccessoryCell : MCSwipeTableViewCell
 
 @property (nonatomic) AccessoryViewModel *viewModel;
 

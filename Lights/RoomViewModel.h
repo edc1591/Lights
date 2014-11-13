@@ -16,6 +16,9 @@
 
 @property (nonatomic, readonly) NSArray *viewModels;
 
+@property (nonatomic, readonly) RACCommand *onCommand;
+@property (nonatomic, readonly) RACCommand *offCommand;
+
 - (instancetype)initWithRoom:(HMRoom *)room homeController:(HomeController *)homeController;
 
 @end

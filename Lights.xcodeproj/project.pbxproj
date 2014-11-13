@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206880DB1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880DA1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m */; };
+		206880DE1A1460C80006C098 /* HMAccessory+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880DD1A1460C80006C098 /* HMAccessory+RACSignalSupport.m */; };
 		20DD20C61A10238B0036F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C51A10238B0036F12E /* main.m */; };
 		20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C81A10238B0036F12E /* AppDelegate.m */; };
 		20DD20D11A10238B0036F12E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DD20D01A10238B0036F12E /* Images.xcassets */; };
@@ -45,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		206880D91A145C990006C098 /* HMCharacteristic+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMCharacteristic+RACSignalSupport.h"; sourceTree = "<group>"; };
+		206880DA1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMCharacteristic+RACSignalSupport.m"; sourceTree = "<group>"; };
+		206880DC1A1460C80006C098 /* HMAccessory+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMAccessory+RACSignalSupport.h"; sourceTree = "<group>"; };
+		206880DD1A1460C80006C098 /* HMAccessory+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMAccessory+RACSignalSupport.m"; sourceTree = "<group>"; };
 		20DD20C01A10238B0036F12E /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DD20C41A10238B0036F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DD20C51A10238B0036F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -233,6 +239,10 @@
 				20DD20F31A1025830036F12E /* HMHomeManager+RACSignalSupport.m */,
 				20DD20F71A1025B10036F12E /* HMHome+RACSignalSupport.h */,
 				20DD20F81A1025B10036F12E /* HMHome+RACSignalSupport.m */,
+				206880DC1A1460C80006C098 /* HMAccessory+RACSignalSupport.h */,
+				206880DD1A1460C80006C098 /* HMAccessory+RACSignalSupport.m */,
+				206880D91A145C990006C098 /* HMCharacteristic+RACSignalSupport.h */,
+				206880DA1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m */,
 			);
 			name = RACSignalSupport;
 			sourceTree = "<group>";
@@ -443,7 +453,9 @@
 				20DD210B1A102E540036F12E /* HomeViewModel.m in Sources */,
 				20DD20F91A1025B10036F12E /* HMHome+RACSignalSupport.m in Sources */,
 				20DD21051A10261A0036F12E /* RoomsViewModel.m in Sources */,
+				206880DE1A1460C80006C098 /* HMAccessory+RACSignalSupport.m in Sources */,
 				20DD21181A1059F30036F12E /* AccessoriesViewModel.m in Sources */,
+				206880DB1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m in Sources */,
 				20DD20FC1A1025E70036F12E /* RoomsViewController.m in Sources */,
 				20DD20F41A1025830036F12E /* HMHomeManager+RACSignalSupport.m in Sources */,
 				20DD21081A1027610036F12E /* HomeController.m in Sources */,
