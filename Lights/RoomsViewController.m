@@ -11,6 +11,7 @@
 #import "AccessoriesViewController.h"
 #import "AccessoryCell.h"
 #import "RoomHeaderView.h"
+#import "BrightnessView.h"
 
 #import "HomeViewModel.h"
 #import "RoomsViewModel.h"
@@ -19,6 +20,8 @@
 #import "AccessoriesViewModel.h"
 
 @interface RoomsViewController ()
+
+@property (nonatomic, readonly) BrightnessView *brightnessView;
 
 @property (nonatomic, readonly) RoomHeaderView *mockHeaderView;
 
@@ -33,6 +36,10 @@
         
         self.title = viewModel.homeName;
         self.navigationBarColor = [UIColor flatRedColorDark];
+        
+        _brightnessView = [[BrightnessView alloc] init];
+        _brightnessView.hidden = YES;
+        [self.view addSubview:_brightnessView];
         
         _mockHeaderView = [[RoomHeaderView alloc] init];
     }
@@ -73,6 +80,37 @@
     [self setToolbarItems:@[ flexibleSpaceItem, addBarButtonItem, flexibleSpaceItem, devicesItem, flexibleSpaceItem ]];
     [self.navigationController setToolbarHidden:NO];
     
+    UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:nil action:nil];
+    [[[gestureRecognizer.rac_gestureSignal
+        filter:^BOOL(UIGestureRecognizer *gestureRecognizer) {
+            @strongify(self);
+            CGPoint touchPoint = [gestureRecognizer locationInView:self.tableView];
+            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:touchPoint];
+            return ((gestureRecognizer.state == UIGestureRecognizerStateBegan || gestureRecognizer.state == UIGestureRecognizerStateChanged) && indexPath != nil);
+        }]
+        map:^AccessoryViewModel *(UIGestureRecognizer *gestureRecognizer) {
+            @strongify(self);
+            CGPoint touchPoint = [gestureRecognizer locationInView:self.tableView];
+            NSLog(@"%@", NSStringFromCGPoint(touchPoint));
+            self.brightnessView.touchPoint = touchPoint;
+            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:touchPoint];
+            RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
+            return roomViewModel.viewModels[indexPath.row];
+        }]
+        subscribeNext:^(AccessoryViewModel *viewModel) {
+            @strongify(self);
+            self.brightnessView.hidden = NO;
+        }];
+    [[gestureRecognizer.rac_gestureSignal
+        filter:^BOOL(UIGestureRecognizer *gestureRecognizer) {
+            return (gestureRecognizer.state == UIGestureRecognizerStateRecognized);
+        }]
+        subscribeNext:^(id _) {
+            @strongify(self);
+            self.brightnessView.hidden = YES;
+        }];
+    [self.tableView addGestureRecognizer:gestureRecognizer];
+    
     [[[self.viewModel.scanAccessoriesCommand executionSignals]
         switchToLatest]
         subscribeNext:^(AccessoriesViewModel *viewModel) {
@@ -98,6 +136,10 @@
     [super viewWillDisappear:animated];
     
     [self.navigationController setToolbarHidden:YES];
+}
+
+- (void)viewWillLayoutSubviews {
+    self.brightnessView.frame = self.tableView.bounds;
 }
 
 #pragma mark - UITableViewDelegate

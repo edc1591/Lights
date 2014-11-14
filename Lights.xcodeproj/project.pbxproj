@@ -10,6 +10,7 @@
 		206880DB1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880DA1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m */; };
 		206880DE1A1460C80006C098 /* HMAccessory+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880DD1A1460C80006C098 /* HMAccessory+RACSignalSupport.m */; };
 		206880E71A159A2A0006C098 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880E61A159A2A0006C098 /* TableViewController.m */; };
+		206880F01A15B4470006C098 /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880EF1A15B4470006C098 /* BrightnessView.m */; };
 		20DD20C61A10238B0036F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C51A10238B0036F12E /* main.m */; };
 		20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C81A10238B0036F12E /* AppDelegate.m */; };
 		20DD20D11A10238B0036F12E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DD20D01A10238B0036F12E /* Images.xcassets */; };
@@ -54,6 +55,8 @@
 		206880DD1A1460C80006C098 /* HMAccessory+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMAccessory+RACSignalSupport.m"; sourceTree = "<group>"; };
 		206880E51A159A2A0006C098 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		206880E61A159A2A0006C098 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		206880EE1A15B4470006C098 /* BrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessView.h; sourceTree = "<group>"; };
+		206880EF1A15B4470006C098 /* BrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessView.m; sourceTree = "<group>"; };
 		20DD20C01A10238B0036F12E /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DD20C41A10238B0036F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DD20C51A10238B0036F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 				20DD20FE1A1025F10036F12E /* HomesViewController.m */,
 				20DD20FA1A1025E70036F12E /* RoomsViewController.h */,
 				20DD20FB1A1025E70036F12E /* RoomsViewController.m */,
+				206880EE1A15B4470006C098 /* BrightnessView.h */,
+				206880EF1A15B4470006C098 /* BrightnessView.m */,
 				20DD21131A1059C20036F12E /* AccessoriesViewController.h */,
 				20DD21141A1059C20036F12E /* AccessoriesViewController.m */,
 				20DD21221A12FF140036F12E /* Table View Cells */,
@@ -459,6 +464,7 @@
 				20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */,
 				20DD20C61A10238B0036F12E /* main.m in Sources */,
 				20DD21151A1059C20036F12E /* AccessoriesViewController.m in Sources */,
+				206880F01A15B4470006C098 /* BrightnessView.m in Sources */,
 				20DD21121A104ED60036F12E /* RoomViewModel.m in Sources */,
 				20DD21251A12FF3F0036F12E /* RoomHeaderView.m in Sources */,
 				20DD210F1A10326D0036F12E /* EmptyViewModel.m in Sources */,
