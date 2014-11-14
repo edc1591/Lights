@@ -27,11 +27,12 @@
 @implementation RoomsViewController
 
 - (instancetype)initWithViewModel:(RoomsViewModel *)viewModel {
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self != nil) {
         _viewModel = viewModel;
         
         self.title = viewModel.homeName;
+        self.navigationBarColor = [UIColor flatRedColorDark];
         
         _mockHeaderView = [[RoomHeaderView alloc] init];
     }
@@ -40,7 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     [self.tableView registerClass:[AccessoryCell class] forCellReuseIdentifier:NSStringFromClass([AccessoryCell class])];
     [self.tableView registerClass:[RoomHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([RoomHeaderView class])];
     
@@ -85,6 +86,12 @@
         subscribeNext:^(UITableView *tableView) {
             [tableView reloadData];
         }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setToolbarHidden:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

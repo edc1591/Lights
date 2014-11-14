@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
+#import "TableViewController.h"
+
 @class AccessoriesViewModel;
 
-@interface AccessoriesViewController : UITableViewController
+@interface AccessoriesViewController : TableViewController
 
 - (instancetype)initWithViewModel:(AccessoriesViewModel *)viewModel;
 

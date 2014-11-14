@@ -28,8 +28,8 @@
     HomesViewModel *homesViewModel = [[HomesViewModel alloc] initWithHomesController:homesController];
     HomesViewController *homesViewController = [[HomesViewController alloc] initWithViewModel:homesViewModel];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:homesViewController];
+    navigationController.navigationBar.translucent = NO;    
     self.window.rootViewController = navigationController;
-    
     [self.window makeKeyAndVisible];
     
     return YES;

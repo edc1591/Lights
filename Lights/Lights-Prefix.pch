@@ -15,6 +15,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <PureLayout/PureLayout.h>
 #import <EXTScope.h>
+#import <ChameleonFramework/Chameleon.h>
 
 #import "UIFont+Lights.h"
 

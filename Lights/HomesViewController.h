@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
+#import "TableViewController.h"
+
 @class HomesViewModel;
 
-@interface HomesViewController : UITableViewController
+@interface HomesViewController : TableViewController
 
 @property (nonatomic, readonly) HomesViewModel *viewModel;
 

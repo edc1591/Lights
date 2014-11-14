@@ -8,6 +8,8 @@
 
 #import "AccessoriesViewController.h"
 
+#import "AccessoryCell.h"
+
 #import "AccessoriesViewModel.h"
 #import "AccessoryViewModel.h"
 #import "HomeViewModel.h"
@@ -27,6 +29,7 @@
         _viewModel = viewModel;
         
         self.title = NSLocalizedString(@"Accessories", nil);
+        self.navigationBarColor = [UIColor flatMintColorDark];
     }
     return self;
 }
@@ -34,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"AccessoryCell"];
+    [self.tableView registerClass:[AccessoryCell class] forCellReuseIdentifier:NSStringFromClass([AccessoryCell class])];
     
     @weakify(self);
     UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
@@ -87,10 +90,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AccessoryCell" forIndexPath:indexPath];
+    AccessoryCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AccessoryCell class]) forIndexPath:indexPath];
     
     AccessoryViewModel *viewModel = self.viewModel.viewModels[indexPath.row];
-    cell.textLabel.text = viewModel.name;
+    cell.viewModel = viewModel;
     
     return cell;
 }

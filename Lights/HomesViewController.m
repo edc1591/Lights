@@ -26,6 +26,7 @@
         _viewModel = viewModel;
         
         self.title = NSLocalizedString(@"Homes", nil);
+        self.navigationBarColor = [UIColor flatBlueColorDark];
         
         [[RACObserve(self.viewModel, viewModels)
             mapReplace:self.tableView]
@@ -71,11 +72,6 @@
         }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -98,6 +94,10 @@
     
     HomeViewModel *homeViewModel = self.viewModel.viewModels[indexPath.row];
     cell.textLabel.text = homeViewModel.name;
+    cell.textLabel.font = [UIFont lights_boldFontWithSize:16];
+    cell.textLabel.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:tableView.backgroundColor isFlat:YES];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }

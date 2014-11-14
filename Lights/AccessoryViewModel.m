@@ -35,7 +35,7 @@
         RAC(self, statusColor) =
             [RACObserve(self.accessory, reachable)
                 map:^UIColor *(NSNumber *reachable) {
-                    return [reachable boolValue] ? [UIColor blackColor] : [UIColor redColor];
+                    return [reachable boolValue] ? [UIColor flatBlackColor] : [UIColor flatRedColor];
                 }];
         
         @weakify(self);

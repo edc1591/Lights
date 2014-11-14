@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
+#import "TableViewController.h"
+
 @class RoomsViewModel;
 
-@interface RoomsViewController : UITableViewController
+@interface RoomsViewController : TableViewController
 
 @property (nonatomic, readonly) RoomsViewModel *viewModel;
 
