@@ -10,6 +10,7 @@
 
 #import "HomeViewModel.h"
 #import "RoomsViewModel.h"
+#import "EmptyViewModel.h"
 
 #import "HomeController.h"
 #import "HomesController.h"
@@ -42,7 +43,7 @@
             return [RACSignal return:[[RoomsViewModel alloc] initWithHomeController:viewModel.homeController]];
         }];
         
-        RAC(self, viewModels) =
+        RACSignal *viewModelsSignal =
             [RACObserve(self.homesController, homes)
                 map:^NSArray *(NSArray *homes) {
                     return [[homes.rac_sequence
@@ -52,6 +53,22 @@
                                 }]
                                 array];
                 }];
+        
+        RACSignal *emptyViewModelSignal =
+            [[RACObserve(self.homesController, homes)
+                filter:^BOOL(NSArray *homes) {
+                    return [homes count] == 0;
+                }]
+                map:^NSArray *(id _) {
+                    @strongify(self);
+                    EmptyViewModel *viewModel =  [[EmptyViewModel alloc] initWithTitle:NSLocalizedString(@"No Homes", nil)
+                                                                               message:NSLocalizedString(@"Tap to add a home.", nil)
+                                                                         actionCommand:self.addHomeCommand];
+                    return @[viewModel];
+                }];
+        
+        RAC(self, viewModels) =
+            [RACSignal merge:@[viewModelsSignal, emptyViewModelSignal]];
     }
     return self;
 }

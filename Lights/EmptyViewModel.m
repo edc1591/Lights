@@ -10,11 +10,12 @@
 
 @implementation EmptyViewModel
 
-- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message {
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message actionCommand:(RACCommand *)actionCommand {
     self = [super init];
     if (self != nil) {
         _title = title;
         _message = message;
+        _actionCommand = actionCommand;
     }
     return self;
 }

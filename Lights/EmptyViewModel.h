@@ -13,6 +13,6 @@
 
 @property (nonatomic, readonly) RACCommand *actionCommand;
 
-- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message;
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message actionCommand:(RACCommand *)actionCommand;
 
 @end

@@ -13,6 +13,7 @@
 #import "HomesViewModel.h"
 #import "HomeViewModel.h"
 #import "RoomsViewModel.h"
+#import "EmptyViewModel.h"
 
 @interface HomesViewController ()
 
@@ -92,12 +93,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell" forIndexPath:indexPath];
     
-    HomeViewModel *homeViewModel = self.viewModel.viewModels[indexPath.row];
-    cell.textLabel.text = homeViewModel.name;
-    cell.textLabel.font = [UIFont lights_boldFontWithSize:16];
-    cell.textLabel.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:tableView.backgroundColor isFlat:YES];
-    cell.textLabel.backgroundColor = [UIColor clearColor];
-    cell.backgroundColor = [UIColor clearColor];
+    NSObject *viewModel = self.viewModel.viewModels[indexPath.row];
+    if ([viewModel isKindOfClass:[HomeViewModel class]]) {
+        HomeViewModel *homeViewModel = (HomeViewModel *)viewModel;
+        cell.textLabel.font = [UIFont lights_boldFontWithSize:16];
+        cell.textLabel.text = homeViewModel.name;
+    } else {
+        EmptyViewModel *emptyViewModel = (EmptyViewModel *)viewModel;
+        cell.textLabel.text = emptyViewModel.title;
+        cell.detailTextLabel.text = emptyViewModel.message;
+    }
     
     return cell;
 }
