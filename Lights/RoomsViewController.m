@@ -86,21 +86,7 @@
     [self.navigationController setToolbarHidden:NO];
     
     TableView *tableView = (TableView *)self.tableView;
-    RACSignal *brightnessSignal =
-        [RACObserve(tableView, translation)
-            scanWithStart:nil
-            reduce:^NSNumber *(NSNumber *brightness, NSNumber *translation) {
-                CGFloat num = [brightness doubleValue] - [translation doubleValue];
-                if (num > 100) {
-                    return @100;
-                } else if (num < 0) {
-                    return @0;
-                } else {
-                    return @(num);
-                }
-            }];
-    
-    [[[[RACObserve(tableView, holdIndexPath)
+    [[[[[RACObserve(tableView, holdIndexPath)
         doNext:^(NSIndexPath *indexPath) {
             @strongify(self);
             if (indexPath == nil) {
@@ -110,9 +96,25 @@
         filter:^BOOL(NSIndexPath *indexPath) {
             return (indexPath != nil);
         }]
-        map:^BrightnessViewController *(NSIndexPath *indexPath) {
+        combineLatestWith:[RACSignal return:tableView]]
+        map:^BrightnessViewController *(RACTuple *t) {
+            RACTupleUnpack(NSIndexPath *indexPath, TableView *tableView) = t;
             RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
             AccessoryViewModel *accessoryViewModel = roomViewModel.viewModels[indexPath.row];
+            
+            RACSignal *brightnessSignal =
+                [RACObserve(tableView, translation)
+                    scanWithStart:accessoryViewModel.brightness
+                    reduce:^NSNumber *(NSNumber *brightness, NSNumber *translation) {
+                        CGFloat num = [brightness doubleValue] - [translation doubleValue];
+                        if (num > 100) {
+                            return @100;
+                        } else if (num < 0) {
+                            return @0;
+                        } else {
+                            return @(num);
+                        }
+                    }];
             BrightnessViewController *vc = [[BrightnessViewController alloc] initWithViewModel:accessoryViewModel brightnessSignal:brightnessSignal];
             vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
             vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;

@@ -18,6 +18,7 @@
 @interface AccessoryViewModel () <HMAccessoryDelegate>
 
 @property (nonatomic) NSString *name;
+@property (nonatomic) NSNumber *brightness;
 @property (nonatomic) UIColor *statusColor;
 
 @end
@@ -31,6 +32,13 @@
         _accessory.delegate = self;
         
         RAC(self, name) = RACObserve(self.accessory, name);
+        
+        RAC(self, brightness) =
+            [[[self.accessory rac_getCharacterisitic:HMCharacteristicTypeBrightness]
+                flattenMap:^RACSignal *(HMCharacteristic *characteristic) {
+                    return [characteristic rac_observeValue];
+                }]
+                catchTo:[RACSignal return:@0]];
         
         RAC(self, statusColor) =
             [RACObserve(self.accessory, reachable)

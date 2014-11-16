@@ -24,6 +24,11 @@
     }];
 }
 
+- (RACSignal *)rac_observeValue {
+    return [[self rac_readValue]
+                concat:RACObserve(self, value)];
+}
+
 - (RACSignal *)rac_readValue {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [self readValueWithCompletionHandler:^(NSError *error) {

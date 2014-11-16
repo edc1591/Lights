@@ -13,6 +13,7 @@
 @property (nonatomic, readonly) HMAccessory *accessory;
 
 @property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSNumber *brightness;
 @property (nonatomic, readonly) UIColor *statusColor;
 
 @property (nonatomic, readonly) RACCommand *pairAccessoryCommand;
