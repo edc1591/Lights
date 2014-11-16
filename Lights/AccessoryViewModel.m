@@ -54,7 +54,7 @@
         
         _onCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
             @strongify(self);
-            return [[self.accessory rac_powerCharacteristic]
+            return [[self.accessory rac_getCharacterisitic:HMCharacteristicTypePowerState]
                         flattenMap:^RACSignal *(HMCharacteristic *characteristic) {
                             return [characteristic rac_writeValue:@YES];
                         }];
@@ -62,9 +62,17 @@
         
         _offCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
             @strongify(self);
-            return [[self.accessory rac_powerCharacteristic]
+            return [[self.accessory rac_getCharacterisitic:HMCharacteristicTypePowerState]
                         flattenMap:^RACSignal *(HMCharacteristic *characteristic) {
                             return [characteristic rac_writeValue:@NO];
+                        }];
+        }];
+        
+        _setBrightnessCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSNumber *brightness) {
+            @strongify(self);
+            return [[self.accessory rac_getCharacterisitic:HMCharacteristicTypeBrightness]
+                        flattenMap:^RACSignal *(HMCharacteristic *characteristic) {
+                            return [characteristic rac_writeValue:brightness];
                         }];
         }];
     }

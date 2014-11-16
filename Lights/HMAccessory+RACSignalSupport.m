@@ -10,7 +10,7 @@
 
 @implementation HMAccessory (RACSignalSupport)
 
-- (RACSignal *)rac_powerCharacteristic {
+- (RACSignal *)rac_getCharacterisitic:(NSString *)characteristic {
     return [[[[[self.services.rac_sequence
                     filter:^BOOL(HMService *service) {
                         return [service.serviceType isEqualToString:HMServiceTypeLightbulb];
@@ -18,8 +18,8 @@
                     take:1]
                     map:^NSArray *(HMService *service) {
                         return [[service.characteristics.rac_sequence
-                                    filter:^BOOL(HMCharacteristic *characteristic) {
-                                        return [characteristic.characteristicType isEqualToString:HMCharacteristicTypePowerState];
+                                    filter:^BOOL(HMCharacteristic *c) {
+                                        return [c.characteristicType isEqualToString:characteristic];
                                     }]
                                     array];
                     }]

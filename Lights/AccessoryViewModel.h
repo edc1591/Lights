@@ -19,6 +19,7 @@
 
 @property (nonatomic, readonly) RACCommand *onCommand;
 @property (nonatomic, readonly) RACCommand *offCommand;
+@property (nonatomic, readonly) RACCommand *setBrightnessCommand;
 
 - (instancetype)initWithAccessory:(HMAccessory *)accessory homeController:(HomeController *)homeController;
 

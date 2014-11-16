@@ -10,6 +10,6 @@
 
 @interface HMAccessory (RACSignalSupport)
 
-- (RACSignal *)rac_powerCharacteristic;
+- (RACSignal *)rac_getCharacterisitic:(NSString *)characteristic;
 
 @end
