@@ -88,15 +88,18 @@
     TableView *tableView = (TableView *)self.tableView;
     RACSignal *brightnessSignal =
         [RACObserve(tableView, translation)
-            map:^NSNumber *(NSNumber *translation) {
-                if ([translation doubleValue] > 100) {
+            scanWithStart:nil
+            reduce:^NSNumber *(NSNumber *brightness, NSNumber *translation) {
+                CGFloat num = [brightness doubleValue] - [translation doubleValue];
+                if (num > 100) {
                     return @100;
-                } else if ([translation doubleValue] < 0) {
+                } else if (num < 0) {
                     return @0;
                 } else {
-                    return translation;
+                    return @(num);
                 }
             }];
+    
     [[[[RACObserve(tableView, holdIndexPath)
         doNext:^(NSIndexPath *indexPath) {
             @strongify(self);

@@ -45,21 +45,17 @@
             }];
         
         RAC(self, translation) =
-            [[[[pressGestureRecognizer.rac_gestureSignal
+            [[[pressGestureRecognizer.rac_gestureSignal
                 filter:^BOOL(UIGestureRecognizer *gestureRecognizer) {
                     return (gestureRecognizer.state == UIGestureRecognizerStateChanged);
                 }]
                 map:^NSNumber *(UIGestureRecognizer *gestureRecognizer) {
                     @strongify(self);
-                    return @([gestureRecognizer locationInView:self].y);
+                    return @([gestureRecognizer locationInView:self].y / 3);
                 }]
                 combinePreviousWithStart:nil
                 reduce:^NSNumber *(NSNumber *previous, NSNumber *current) {
                     return @([current doubleValue] - [previous ?: current doubleValue]);
-                }]
-                scanWithStart:nil
-                reduce:^NSNumber *(NSNumber *translation, NSNumber *diff) {
-                    return @([translation doubleValue] - [diff doubleValue]);
                 }];
     }
     return self;
