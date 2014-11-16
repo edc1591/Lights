@@ -28,12 +28,6 @@
         
         self.title = NSLocalizedString(@"Homes", nil);
         self.navigationBarColor = [UIColor flatBlueColorDark];
-        
-        [[RACObserve(self.viewModel, viewModels)
-            mapReplace:self.tableView]
-            subscribeNext:^(UITableView *tableView) {
-                [tableView reloadData];
-            }];
     }
     return self;
 }
@@ -63,6 +57,25 @@
         return [RACSignal empty];
     }];
     self.navigationItem.rightBarButtonItem = addBarButtonItem;
+    
+    [[[[[RACObserve(self.viewModel, viewModels)
+        doNext:^(id _) {
+            @strongify(self);
+            [self.tableView reloadData];
+        }]
+        filter:^BOOL(NSArray *viewModels) {
+            return [viewModels count] == 1;
+        }]
+        map:^HomeViewModel *(NSArray *viewModels) {
+            return [viewModels firstObject];
+        }]
+        filter:^BOOL(NSObject *viewModel) {
+            return [viewModel isKindOfClass:[HomeViewModel class]];
+        }]
+        subscribeNext:^(HomeViewModel *viewModel) {
+            @strongify(self);
+            [self.viewModel.tapHomeCommand execute:viewModel];
+        }];
     
     [[[self.viewModel.tapHomeCommand executionSignals]
         switchToLatest]
