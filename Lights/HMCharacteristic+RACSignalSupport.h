@@ -11,5 +11,6 @@
 @interface HMCharacteristic (RACSignalSupport)
 
 - (RACSignal *)rac_writeValue:(id)value;
+- (RACSignal *)rac_readValue;
 
 @end

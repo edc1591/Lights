@@ -24,4 +24,19 @@
     }];
 }
 
+- (RACSignal *)rac_readValue {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self readValueWithCompletionHandler:^(NSError *error) {
+            if (error != nil) {
+                [subscriber sendError:error];
+            } else {
+                [subscriber sendNext:self.value];
+                [subscriber sendCompleted];
+            }
+        }];
+        
+        return nil;
+    }];
+}
+
 @end
