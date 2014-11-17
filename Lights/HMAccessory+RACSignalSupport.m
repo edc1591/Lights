@@ -34,4 +34,18 @@
                     }];
 }
 
+- (RACSignal *)rac_rename:(NSString *)name {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self updateName:name completionHandler:^(NSError *error) {
+            if (error != nil) {
+                [subscriber sendError:error];
+            } else {
+                [subscriber sendCompleted];
+            }
+        }];
+        
+        return nil;
+    }];
+}
+
 @end

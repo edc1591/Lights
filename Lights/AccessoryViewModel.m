@@ -60,6 +60,16 @@
                         }];
         }];
         
+        _deleteAccessoryCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
+            @strongify(self);
+            return [homeController removeAccessory:self.accessory];
+        }];
+        
+        _renameAccessoryCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *newName) {
+            @strongify(self);
+            return [self.accessory rac_rename:newName];
+        }];
+        
         _onCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
             @strongify(self);
             return [[self.accessory rac_getCharacterisitic:HMCharacteristicTypePowerState]

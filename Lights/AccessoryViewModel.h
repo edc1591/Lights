@@ -17,6 +17,8 @@
 @property (nonatomic, readonly) UIColor *statusColor;
 
 @property (nonatomic, readonly) RACCommand *pairAccessoryCommand;
+@property (nonatomic, readonly) RACCommand *deleteAccessoryCommand;
+@property (nonatomic, readonly) RACCommand *renameAccessoryCommand;
 
 @property (nonatomic, readonly) RACCommand *onCommand;
 @property (nonatomic, readonly) RACCommand *offCommand;

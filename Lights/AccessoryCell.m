@@ -19,6 +19,7 @@
     if (self != nil) {
         @weakify(self);
         
+        self.accessoryType = UITableViewCellAccessoryDetailButton;
         self.textLabel.font = [UIFont lights_regularFontWithSize:18];
         [self setDefaultColor:[UIColor flatGrayColor]];
         

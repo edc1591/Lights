@@ -19,6 +19,7 @@
 - (RACSignal *)removeRoom:(HMRoom *)room;
 
 - (RACSignal *)addAccessory:(HMAccessory *)accessory;
+- (RACSignal *)removeAccessory:(HMAccessory *)accessory;
 - (RACSignal *)assignAccessory:(HMAccessory *)accessory toRoom:(HMRoom *)room;
 
 @end

@@ -53,6 +53,20 @@
     }];
 }
 
+- (RACSignal *)rac_removeAccessory:(HMAccessory *)accessory {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self removeAccessory:accessory completionHandler:^(NSError *error) {
+            if (error != nil) {
+                [subscriber sendError:error];
+            } else {
+                [subscriber sendCompleted];
+            }
+        }];
+        
+        return nil;
+    }];
+}
+
 - (RACSignal *)rac_assignAccessory:(HMAccessory *)accessory toRoom:(HMRoom *)room {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [self assignAccessory:accessory toRoom:room completionHandler:^(NSError *error) {

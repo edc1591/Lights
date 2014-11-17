@@ -160,6 +160,34 @@
 
 #pragma mark - UITableViewDelegate
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
+    AccessoryViewModel *accessoryViewModel = roomViewModel.viewModels[indexPath.row];
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:accessoryViewModel.name message:NSLocalizedString(@"Which action would you like to perform?", nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Delete", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        [accessoryViewModel.deleteAccessoryCommand execute:nil];
+    }];
+    [alertController addAction:deleteAction];
+    UIAlertAction *renameAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Rename", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIAlertController *renameAlertController = [UIAlertController alertControllerWithTitle:accessoryViewModel.name message:NSLocalizedString(@"Enter a new name for this accessory.", nil) preferredStyle:UIAlertControllerStyleAlert];
+        [renameAlertController addTextFieldWithConfigurationHandler:nil];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [accessoryViewModel.renameAccessoryCommand execute:[[renameAlertController.textFields firstObject] text]];
+        }];
+        [renameAlertController addAction:okAction];
+        UIAlertAction *cancelRenameAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleDefault handler:nil];
+        [renameAlertController addAction:cancelRenameAction];
+        [self presentViewController:renameAlertController animated:YES completion:nil];
+    }];
+    [alertController addAction:renameAction];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     RoomHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([RoomHeaderView class])];
     

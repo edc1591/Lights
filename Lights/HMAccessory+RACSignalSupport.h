@@ -11,5 +11,6 @@
 @interface HMAccessory (RACSignalSupport)
 
 - (RACSignal *)rac_getCharacterisitic:(NSString *)characteristic;
+- (RACSignal *)rac_rename:(NSString *)name;
 
 @end

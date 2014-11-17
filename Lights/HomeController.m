@@ -62,6 +62,19 @@
                 }];
 }
 
+- (RACSignal *)removeAccessory:(HMAccessory *)accessory {
+    @weakify(self);
+    HMRoom *room = accessory.room;
+    [room willChangeValueForKey:@keypath(room, accessories)];
+    return [[self.home rac_removeAccessory:accessory]
+                doCompleted:^{
+                    @strongify(self);
+                    self.accessories = self.home.accessories;
+                    self.rooms = self.home.rooms;
+                    [room didChangeValueForKey:@keypath(room, accessories)];
+                }];
+}
+
 - (RACSignal *)assignAccessory:(HMAccessory *)accessory toRoom:(HMRoom *)room {
     [room willChangeValueForKey:@keypath(room, accessories)];
     return [[self.home rac_assignAccessory:accessory toRoom:room]
