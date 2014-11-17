@@ -77,6 +77,7 @@
         }];
         
         _setBrightnessCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSNumber *brightness) {
+            brightness = @(round([brightness doubleValue])); // Make sure we send an integer
             @strongify(self);
             return [[self.accessory rac_getCharacterisitic:HMCharacteristicTypeBrightness]
                         flattenMap:^RACSignal *(HMCharacteristic *characteristic) {
