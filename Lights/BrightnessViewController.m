@@ -66,6 +66,8 @@
             }];
     
     [[[RACObserve(self, brightness)
+    [[[[RACObserve(self, brightness)
+        skip:1]
         distinctUntilChanged]
         throttle:0.1]
         subscribeNext:^(NSNumber *brightness) {
