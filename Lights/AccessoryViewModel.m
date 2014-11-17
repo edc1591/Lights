@@ -38,7 +38,7 @@
                 flattenMap:^RACSignal *(HMCharacteristic *characteristic) {
                     return [characteristic rac_observeValue];
                 }]
-                catchTo:[RACSignal return:@0]];
+                catchTo:[RACSignal return:@-1]];
         
         RAC(self, statusColor) =
             [RACObserve(self.accessory, reachable)

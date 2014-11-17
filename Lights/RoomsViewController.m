@@ -86,7 +86,7 @@
     [self.navigationController setToolbarHidden:NO];
     
     TableView *tableView = (TableView *)self.tableView;
-    [[[[[RACObserve(tableView, holdIndexPath)
+    [[[[[[RACObserve(tableView, holdIndexPath)
         doNext:^(NSIndexPath *indexPath) {
             @strongify(self);
             if (indexPath == nil) {
@@ -96,11 +96,17 @@
         filter:^BOOL(NSIndexPath *indexPath) {
             return (indexPath != nil);
         }]
-        combineLatestWith:[RACSignal return:tableView]]
-        map:^BrightnessViewController *(RACTuple *t) {
-            RACTupleUnpack(NSIndexPath *indexPath, TableView *tableView) = t;
+        map:^AccessoryViewModel *(NSIndexPath *indexPath) {
             RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
             AccessoryViewModel *accessoryViewModel = roomViewModel.viewModels[indexPath.row];
+            return accessoryViewModel;
+        }]
+        combineLatestWith:[RACSignal return:tableView]]
+        tryMap:^BrightnessViewController *(RACTuple *t, NSError *__autoreleasing *errorPtr) {
+            RACTupleUnpack(AccessoryViewModel *accessoryViewModel, TableView *tableView) = t;
+            if ([accessoryViewModel.brightness isEqualToNumber:@-1]) {
+                return nil;
+            }
             
             RACSignal *brightnessSignal =
                 [RACObserve(tableView, translation)
