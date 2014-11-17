@@ -27,12 +27,7 @@
         _homeManager = [[HMHomeManager alloc] init];
         _homeManager.delegate = self;
         
-        RAC(self, homes) =
-            [[self rac_signalForSelector:@selector(homeManagerDidUpdateHomes:)]
-                reduceEach:^NSArray *(HMHomeManager *homeManager){
-                    return homeManager.homes;
-                }];
-        
+        RAC(self, homes) = [_homeManager rac_observeHomes];
     }
     return self;
 }

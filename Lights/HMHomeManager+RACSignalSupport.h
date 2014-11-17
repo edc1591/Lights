@@ -10,6 +10,10 @@
 
 @interface HMHomeManager (RACSignalSupport)
 
+/// Sends an NSArray of HMHome objects.
+/// Requires a delegate to be set.
+- (RACSignal *)rac_observeHomes;
+
 - (RACSignal *)rac_addHomeWithName:(NSString *)name;
 - (RACSignal *)rac_removeHome:(HMHome *)home;
 
