@@ -15,6 +15,7 @@
 @property (nonatomic) AccessoryViewModel *viewModel;
 
 @property (nonatomic) UILabel *brightnessLabel;
+@property (nonatomic) UILabel *nameLabel;
 
 @property (nonatomic) CGFloat brightness;
 
@@ -43,9 +44,15 @@
     
     self.brightnessLabel = [[UILabel alloc] initForAutoLayout];
     self.brightnessLabel.font = [UIFont lights_boldFontWithSize:48];
-    self.brightnessLabel.textColor = [UIColor whiteColor];
+    self.brightnessLabel.textColor = [UIColor flatWhiteColor];
     self.brightnessLabel.textAlignment = NSTextAlignmentCenter;
     [blurView.contentView addSubview:self.brightnessLabel];
+    
+    self.nameLabel = [[UILabel alloc] initForAutoLayout];
+    self.nameLabel.font = [UIFont lights_regularFontWithSize:18];
+    self.nameLabel.textColor = [UIColor flatGrayColor];
+    self.nameLabel.textAlignment = NSTextAlignmentCenter;
+    [blurView.contentView addSubview:self.nameLabel];
     
     @weakify(self);
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:nil action:nil];
@@ -65,7 +72,8 @@
                 return [NSString stringWithFormat:@"%0.0f%@", [brightness doubleValue], @"%"];
             }];
     
-    [[[RACObserve(self, brightness)
+    RAC(self.nameLabel, text) = RACObserve(self.viewModel, name);
+    
     [[[[RACObserve(self, brightness)
         skip:1]
         distinctUntilChanged]
@@ -77,6 +85,7 @@
     
     [blurView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     [self.brightnessLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self.nameLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 14, 0) excludingEdge:ALEdgeTop];
 }
 
 @end
