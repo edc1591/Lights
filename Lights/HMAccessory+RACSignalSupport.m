@@ -24,12 +24,12 @@
                                     array];
                     }]
                     signal]
-                    flattenMap:^RACSignal *(NSArray *characteristics) {
+                    tryMap:^HMCharacteristic *(NSArray *characteristics, NSError *__autoreleasing *errorPtr) {
                         if ([characteristics count] == 0) {
-                            return [RACSignal error:nil];
+                            return nil;
                         } else {
                             HMCharacteristic *characteristic = [characteristics firstObject];
-                            return [RACSignal return:characteristic];
+                            return characteristic;
                         }
                     }];
 }
