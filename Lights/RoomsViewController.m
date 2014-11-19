@@ -58,32 +58,37 @@
     [self.tableView registerClass:[RoomHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([RoomHeaderView class])];
     
     @weakify(self);
-    UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Add Room", nil) style:UIBarButtonItemStylePlain target:nil action:nil];
-    addBarButtonItem.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
-        @strongify(self);
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Add Room", nil)
-                                                                                 message:NSLocalizedString(@"Enter a name for the room.", nil)
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
-        [alertController addAction:cancelAction];
-        UIAlertAction *addAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Add", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [self.viewModel.addRoomCommand execute:[[alertController.textFields firstObject] text]];
+    UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
+    addItem.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
+        UIAlertController *addAlertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *roomAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Add Room", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            @strongify(self);
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Add Room", nil)
+                                                                                     message:NSLocalizedString(@"Enter a name for the room.", nil)
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
+            [alertController addAction:cancelAction];
+            UIAlertAction *addAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Add", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [self.viewModel.addRoomCommand execute:[[alertController.textFields firstObject] text]];
+            }];
+            [alertController addAction:addAction];
+            [alertController addTextFieldWithConfigurationHandler:nil];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
         }];
-        [alertController addAction:addAction];
-        [alertController addTextFieldWithConfigurationHandler:nil];
+        [addAlertController addAction:roomAction];
+        UIAlertAction *accessoryAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Add Accessory", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self.viewModel.scanAccessoriesCommand execute:nil];
+        }];
+        [addAlertController addAction:accessoryAction];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleDefault handler:nil];
+        [addAlertController addAction:cancelAction];
         
-        [self presentViewController:alertController animated:YES completion:nil];
+        [self presentViewController:addAlertController animated:YES completion:nil];
         
         return [RACSignal empty];
     }];
-    
-    UIBarButtonItem *devicesItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Add Accessory", nil) style:UIBarButtonItemStylePlain target:nil action:nil];
-    devicesItem.rac_command = self.viewModel.scanAccessoriesCommand;
-    
-    UIBarButtonItem *flexibleSpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    
-    [self setToolbarItems:@[ flexibleSpaceItem, addBarButtonItem, flexibleSpaceItem, devicesItem, flexibleSpaceItem ]];
-    [self.navigationController setToolbarHidden:NO];
+    self.navigationItem.rightBarButtonItem = addItem;
     
     TableView *tableView = (TableView *)self.tableView;
     [[[[[[RACObserve(tableView, holdIndexPath)
@@ -144,18 +149,6 @@
         subscribeNext:^(UITableView *tableView) {
             [tableView reloadData];
         }];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.navigationController setToolbarHidden:NO];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    [self.navigationController setToolbarHidden:YES];
 }
 
 #pragma mark - UITableViewDelegate
