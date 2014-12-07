@@ -11,6 +11,7 @@
 @implementation HMAccessory (RACSignalSupport)
 
 - (RACSignal *)rac_getCharacterisitic:(NSString *)characteristic {
+    @weakify(self);
     return [[[[[self.services.rac_sequence
                     filter:^BOOL(HMService *service) {
                         return [service.serviceType isEqualToString:HMServiceTypeLightbulb];
@@ -25,7 +26,9 @@
                     }]
                     signal]
                     tryMap:^HMCharacteristic *(NSArray *characteristics, NSError *__autoreleasing *errorPtr) {
+                        @strongify(self);
                         if ([characteristics count] == 0) {
+                            NSLog(@"No %@ found for %@", characteristic, self.name);
                             return nil;
                         } else {
                             HMCharacteristic *characteristic = [characteristics firstObject];

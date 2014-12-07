@@ -8,6 +8,8 @@
 
 #import "HMCharacteristic+RACSignalSupport.h"
 
+#import "NSError+HomeKitExtensions.h"
+
 @implementation HMCharacteristic (RACSignalSupport)
 
 - (RACSignal *)rac_writeValue:(id)value {
@@ -32,7 +34,7 @@
 - (RACSignal *)rac_readValue {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [self readValueWithCompletionHandler:^(NSError *error) {
-            if (error != nil) {
+            if (error != nil && [error hk_isFatal]) {
                 [subscriber sendError:error];
             } else {
                 [subscriber sendNext:self.value];

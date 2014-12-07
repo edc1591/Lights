@@ -12,6 +12,7 @@
 		206880E71A159A2A0006C098 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880E61A159A2A0006C098 /* TableViewController.m */; };
 		206880F01A15B4470006C098 /* BrightnessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880EF1A15B4470006C098 /* BrightnessViewController.m */; };
 		206880F31A16F6130006C098 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880F21A16F6130006C098 /* TableView.m */; };
+		207FCE441A34FBA2006CE019 /* NSError+HomeKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FCE431A34FBA2006CE019 /* NSError+HomeKitExtensions.m */; };
 		20DD20C61A10238B0036F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C51A10238B0036F12E /* main.m */; };
 		20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C81A10238B0036F12E /* AppDelegate.m */; };
 		20DD20D11A10238B0036F12E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DD20D01A10238B0036F12E /* Images.xcassets */; };
@@ -60,6 +61,8 @@
 		206880EF1A15B4470006C098 /* BrightnessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessViewController.m; sourceTree = "<group>"; };
 		206880F11A16F6130006C098 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
 		206880F21A16F6130006C098 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
+		207FCE421A34FBA2006CE019 /* NSError+HomeKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+HomeKitExtensions.h"; sourceTree = "<group>"; };
+		207FCE431A34FBA2006CE019 /* NSError+HomeKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+HomeKitExtensions.m"; sourceTree = "<group>"; };
 		20DD20C01A10238B0036F12E /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DD20C41A10238B0036F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DD20C51A10238B0036F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				20DD20ED1A1024AE0036F12E /* RACSignalSupport */,
 				20DD21291A130CBC0036F12E /* UIFont+Lights.h */,
 				20DD212A1A130CBC0036F12E /* UIFont+Lights.m */,
+				207FCE421A34FBA2006CE019 /* NSError+HomeKitExtensions.h */,
+				207FCE431A34FBA2006CE019 /* NSError+HomeKitExtensions.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				20DD21151A1059C20036F12E /* AccessoriesViewController.m in Sources */,
 				206880F01A15B4470006C098 /* BrightnessViewController.m in Sources */,
 				206880F31A16F6130006C098 /* TableView.m in Sources */,
+				207FCE441A34FBA2006CE019 /* NSError+HomeKitExtensions.m in Sources */,
 				20DD21121A104ED60036F12E /* RoomViewModel.m in Sources */,
 				20DD21251A12FF3F0036F12E /* RoomHeaderView.m in Sources */,
 				20DD210F1A10326D0036F12E /* EmptyViewModel.m in Sources */,
