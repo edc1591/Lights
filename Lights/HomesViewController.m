@@ -58,11 +58,24 @@
     }];
     self.navigationItem.rightBarButtonItem = addBarButtonItem;
     
-    [[[RACObserve(self.viewModel, viewModels)
+    [[[[[[RACObserve(self.viewModel, viewModels)
         take:2]
-        mapReplace:self.tableView]
-        subscribeNext:^(UITableView *tableView) {
-            [tableView reloadData];
+        doNext:^(id _) {
+            @strongify(self);
+            [self.tableView reloadData];
+        }]
+        filter:^BOOL(NSArray *viewModels) {
+            return [viewModels count] == 1;
+        }]
+        map:^HomeViewModel *(NSArray *viewModels) {
+            return [viewModels firstObject];
+        }]
+        filter:^BOOL(NSObject *viewModel) {
+            return [viewModel isKindOfClass:[HomeViewModel class]];
+        }]
+        subscribeNext:^(HomeViewModel *viewModel) {
+            @strongify(self);
+            [self.viewModel.tapHomeCommand execute:viewModel];
         }];
     
     [[[self.viewModel.tapHomeCommand executionSignals]
