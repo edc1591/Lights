@@ -95,6 +95,9 @@
                             return [characteristic rac_writeValue:brightness];
                         }];
         }];
+        
+        [[RACSignal merge:@[_pairAccessoryCommand.errors, _deleteAccessoryCommand.errors, _renameAccessoryCommand.errors, _onCommand.errors, _offCommand.errors, _setBrightnessCommand.errors]]
+            subscribe:self.errors];
     }
     return self;
 }

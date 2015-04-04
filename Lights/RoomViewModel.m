@@ -63,6 +63,17 @@
                         }]
                         flatten];
         }];
+        
+        [[[RACObserve(self, viewModels)
+            flattenMap:^RACSignal *(NSArray *viewModels) {
+                return [[viewModels.rac_sequence
+                    map:^RACSignal *(AccessoryViewModel *viewModel) {
+                        return viewModel.errors;
+                    }]
+                    signalWithScheduler:[RACScheduler mainThreadScheduler]];
+            }]
+            flatten]
+            subscribe:self.errors];
     }
     return self;
 }

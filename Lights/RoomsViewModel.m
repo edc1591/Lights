@@ -56,6 +56,17 @@
             AccessoriesViewModel *viewModel = [[AccessoriesViewModel alloc] initWithAccessoriesController:accessoriesController homeController:homeController];
             return [RACSignal return:viewModel];
         }];
+        
+        [[[RACObserve(self, viewModels)
+            flattenMap:^RACSignal *(NSArray *viewModels) {
+                return [[viewModels.rac_sequence
+                    map:^RACSignal *(RoomViewModel *viewModel) {
+                        return viewModel.errors;
+                    }]
+                    signalWithScheduler:[RACScheduler mainThreadScheduler]];
+            }]
+            flatten]
+            subscribe:self.errors];
     }
     return self;
 }
