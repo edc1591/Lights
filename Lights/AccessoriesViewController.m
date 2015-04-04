@@ -23,11 +23,11 @@
 
 @implementation AccessoriesViewController
 
+@dynamic viewModel;
+
 - (instancetype)initWithViewModel:(AccessoriesViewModel *)viewModel {
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super initWithViewModel:viewModel style:UITableViewStylePlain];
     if (self != nil) {
-        _viewModel = viewModel;
-        
         self.title = NSLocalizedString(@"Accessories", nil);
         self.navigationBarColor = [UIColor flatMintColorDark];
     }

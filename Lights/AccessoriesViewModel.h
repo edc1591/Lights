@@ -6,10 +6,12 @@
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
+#import "ViewModel.h"
+
 @class AccessoriesController;
 @class HomeController;
 
-@interface AccessoriesViewModel : NSObject
+@interface AccessoriesViewModel : ViewModel
 
 @property (nonatomic, readonly) NSArray *viewModels;
 

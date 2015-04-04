@@ -22,6 +22,8 @@
 
 @interface RoomsViewController ()
 
+@property (nonatomic, readonly) RoomsViewModel *viewModel;
+
 @property (nonatomic, readonly) BrightnessViewController *brightnessView;
 
 @property (nonatomic, readonly) RoomHeaderView *mockHeaderView;
@@ -30,11 +32,11 @@
 
 @implementation RoomsViewController
 
+@dynamic viewModel;
+
 - (instancetype)initWithViewModel:(RoomsViewModel *)viewModel {
-    self = [super initWithStyle:UITableViewStyleGrouped];
+    self = [super initWithViewModel:viewModel style:UITableViewStyleGrouped];
     if (self != nil) {
-        _viewModel = viewModel;
-        
         self.title = viewModel.homeName;
         self.navigationBarColor = [UIColor flatRedColorDark];
         

@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
+#import "ViewModel.h"
+
 @class HomeController;
 
-@interface RoomsViewModel : NSObject
+@interface RoomsViewModel : ViewModel
 
 @property (nonatomic, readonly) NSArray *viewModels;
 

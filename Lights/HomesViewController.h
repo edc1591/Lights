@@ -12,8 +12,6 @@
 
 @interface HomesViewController : TableViewController
 
-@property (nonatomic, readonly) HomesViewModel *viewModel;
-
 - (instancetype)initWithViewModel:(HomesViewModel *)viewModel;
 
 @end

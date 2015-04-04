@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
-@interface EmptyViewModel : NSObject
+#import "ViewModel.h"
+
+@interface EmptyViewModel : ViewModel
 
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, readonly) NSString *message;

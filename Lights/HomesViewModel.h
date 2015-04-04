@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Evan Coleman. All rights reserved.
 //
 
+#import "ViewModel.h"
+
 @class HomesController;
 
-@interface HomesViewModel : NSObject
+@interface HomesViewModel : ViewModel
 
 @property (nonatomic, readonly) HomesController *homesController;
 

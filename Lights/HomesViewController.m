@@ -17,15 +17,17 @@
 
 @interface HomesViewController ()
 
+@property (nonatomic, readonly) HomesViewModel *viewModel;
+
 @end
 
 @implementation HomesViewController
 
+@dynamic viewModel;
+
 - (instancetype)initWithViewModel:(HomesViewModel *)viewModel {
-    self = [super initWithStyle:UITableViewStyleGrouped];
+    self = [super initWithViewModel:viewModel style:UITableViewStyleGrouped];
     if (self != nil) {
-        _viewModel = viewModel;
-        
         self.title = NSLocalizedString(@"Homes", nil);
         self.navigationBarColor = [UIColor flatBlueColorDark];
     }

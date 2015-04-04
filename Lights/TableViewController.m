@@ -8,15 +8,18 @@
 
 #import "TableViewController.h"
 
+#import "ViewModel.h"
+
 @interface TableViewController ()
 
 @end
 
 @implementation TableViewController
 
-- (instancetype)initWithStyle:(UITableViewStyle)style {
+- (instancetype)initWithViewModel:(ViewModel *)viewModel style:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self != nil) {
+        _viewModel = viewModel;
         _navigationBarColor = [UIColor whiteColor];
     }
     return self;
@@ -53,6 +56,14 @@
         subscribeNext:^(RACTuple *t) {
             RACTupleUnpack(UIBarButtonItem *barButtonItem, UIColor *barColor) = t;
             barButtonItem.tintColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:barColor isFlat:YES];
+        }];
+    
+    [self.viewModel.errors
+        subscribeNext:^(NSError *error) {
+            @strongify(self);
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[error localizedDescription] message:[error localizedRecoverySuggestion] preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:alertController animated:YES completion:nil];
         }];
 }
 

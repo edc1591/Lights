@@ -44,7 +44,7 @@
         }];
         
         RACSignal *viewModelsSignal =
-            [RACObserve(self.homesController, homes)
+            [[RACObserve(self.homesController, homes)
                 map:^NSArray *(NSArray *homes) {
                     return [[homes.rac_sequence
                                 map:^HomeViewModel *(HMHome *home) {
@@ -52,6 +52,9 @@
                                     return [[HomeViewModel alloc] initWithHome:home homeController:homeController];
                                 }]
                                 array];
+                }]
+                filter:^BOOL(NSArray *homes) {
+                    return (homes != nil && [homes count] > 0);
                 }];
         
         RACSignal *emptyViewModelSignal =
@@ -69,6 +72,9 @@
         
         RAC(self, viewModels) =
             [RACSignal merge:@[viewModelsSignal, emptyViewModelSignal]];
+        
+        [[RACSignal merge:@[_addHomeCommand.errors, _removeHomeCommand.errors]]
+            subscribe:self.errors];
     }
     return self;
 }

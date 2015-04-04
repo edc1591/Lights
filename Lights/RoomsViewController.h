@@ -12,8 +12,6 @@
 
 @interface RoomsViewController : TableViewController
 
-@property (nonatomic, readonly) RoomsViewModel *viewModel;
-
 - (instancetype)initWithViewModel:(RoomsViewModel *)viewModel;
 
 @end

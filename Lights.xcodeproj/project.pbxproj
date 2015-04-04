@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		204406931AD07DD8007B704F /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 204406921AD07DD8007B704F /* ViewModel.m */; };
 		206880DB1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880DA1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m */; };
 		206880DE1A1460C80006C098 /* HMAccessory+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880DD1A1460C80006C098 /* HMAccessory+RACSignalSupport.m */; };
 		206880E71A159A2A0006C098 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880E61A159A2A0006C098 /* TableViewController.m */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		204406911AD07DD8007B704F /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		204406921AD07DD8007B704F /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		206880D91A145C990006C098 /* HMCharacteristic+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMCharacteristic+RACSignalSupport.h"; sourceTree = "<group>"; };
 		206880DA1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HMCharacteristic+RACSignalSupport.m"; sourceTree = "<group>"; };
 		206880DC1A1460C80006C098 /* HMAccessory+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMAccessory+RACSignalSupport.h"; sourceTree = "<group>"; };
@@ -294,6 +297,8 @@
 			children = (
 				20DD210D1A10326D0036F12E /* EmptyViewModel.h */,
 				20DD210E1A10326D0036F12E /* EmptyViewModel.m */,
+				204406911AD07DD8007B704F /* ViewModel.h */,
+				204406921AD07DD8007B704F /* ViewModel.m */,
 			);
 			name = Generic;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				20DD211B1A105A450036F12E /* AccessoriesController.m in Sources */,
 				20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */,
 				20DD20C61A10238B0036F12E /* main.m in Sources */,
+				204406931AD07DD8007B704F /* ViewModel.m in Sources */,
 				20DD21151A1059C20036F12E /* AccessoriesViewController.m in Sources */,
 				206880F01A15B4470006C098 /* BrightnessViewController.m in Sources */,
 				206880F31A16F6130006C098 /* TableView.m in Sources */,
