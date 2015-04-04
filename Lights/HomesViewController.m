@@ -117,7 +117,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeViewModel *homeViewModel = self.viewModel.viewModels[indexPath.row];
-    [self.viewModel.tapHomeCommand execute:homeViewModel];
+    if ([homeViewModel isKindOfClass:[HomeViewModel class]]) {
+        [self.viewModel.tapHomeCommand execute:homeViewModel];
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark UITableViewDataSource
