@@ -64,10 +64,14 @@
 
 - (RACSignal *)addAccessory:(HMAccessory *)accessory {
     @weakify(self);
+    HMRoom *room = accessory.room;
+    [room willChangeValueForKey:@keypath(room, accessories)];
     return [[self.home rac_addAccessory:accessory]
                 doCompleted:^{
                     @strongify(self);
                     self.accessories = self.home.accessories;
+                    self.rooms = self.home.rooms;
+                    [room didChangeValueForKey:@keypath(room, accessories)];
                 }];
 }
 
@@ -85,9 +89,13 @@
 }
 
 - (RACSignal *)assignAccessory:(HMAccessory *)accessory toRoom:(HMRoom *)room {
+    @weakify(self);
     [room willChangeValueForKey:@keypath(room, accessories)];
     return [[self.home rac_assignAccessory:accessory toRoom:room]
                 doCompleted:^{
+                    @strongify(self);
+                    self.accessories = self.home.accessories;
+                    self.rooms = self.home.rooms;
                     [room didChangeValueForKey:@keypath(room, accessories)];
                 }];
 }
