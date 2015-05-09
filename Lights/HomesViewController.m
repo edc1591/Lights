@@ -90,30 +90,12 @@
             [self.navigationController pushViewController:roomsViewController animated:YES];
         }];
     
-    [[[[[[self.viewModel.addHomeCommand executionSignals]
+    [[[[[self.viewModel.addHomeCommand executionSignals]
         switchToLatest]
-        flattenMap:^RACSignal *(HMHome *home) {
-            @strongify(self);
-            return [[[self.viewModel.viewModels.rac_sequence
-                        filter:^BOOL(HomeViewModel *viewModel) {
-                            return viewModel.home == home;
-                        }]
-                        take:1]
-                        signal];
-        }]
-        tryMap:^NSIndexPath *(HomeViewModel *viewModel, NSError *__autoreleasing *errorPtr) {
-            @strongify(self);
-            NSUInteger idx = [self.viewModel.viewModels indexOfObject:viewModel];
-            if (idx == NSNotFound) {
-                return nil;
-            } else {
-                return [NSIndexPath indexPathForRow:idx inSection:0];
-            }
-        }]
+        mapReplace:self.tableView]
         deliverOn:RACScheduler.mainThreadScheduler]
-        subscribeNext:^(NSIndexPath *indexPath) {
-            @strongify(self);
-            [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        subscribeNext:^(UITableView *tableView) {
+            [tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
         }];
 }
 
@@ -165,7 +147,7 @@
             subscribeError:^(NSError *error) {
                 NSLog(@"Error removing home: %@", [error localizedDescription]);
             } completed:^{
-                [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+                [tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
             }];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
