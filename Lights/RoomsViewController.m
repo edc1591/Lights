@@ -74,7 +74,9 @@
                 [self.viewModel.addRoomCommand execute:[[alertController.textFields firstObject] text]];
             }];
             [alertController addAction:addAction];
-            [alertController addTextFieldWithConfigurationHandler:nil];
+            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+            }];
             
             [self presentViewController:alertController animated:YES completion:nil];
         }];
