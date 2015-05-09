@@ -14,7 +14,7 @@
     @weakify(self);
     return [[[[[self.services.rac_sequence
                     filter:^BOOL(HMService *service) {
-                        return [service.serviceType isEqualToString:HMServiceTypeLightbulb];
+                        return [service.serviceType isEqualToString:HMServiceTypeLightbulb] || [service.serviceType isEqualToString:HMServiceTypeSwitch];
                     }]
                     take:1]
                     map:^NSArray *(HMService *service) {
