@@ -26,7 +26,7 @@
 
 @property (nonatomic, readonly) BrightnessViewController *brightnessView;
 
-@property (nonatomic, readonly) RoomHeaderView *mockHeaderView;
+@property (nonatomic) RoomHeaderView *mockHeaderView;
 
 @end
 
@@ -39,8 +39,6 @@
     if (self != nil) {
         self.title = viewModel.homeName;
         self.navigationBarColor = [UIColor flatRedColorDark];
-        
-        _mockHeaderView = [[RoomHeaderView alloc] init];
     }
     return self;
 }
@@ -58,6 +56,8 @@
         
     [self.tableView registerClass:[AccessoryCell class] forCellReuseIdentifier:NSStringFromClass([AccessoryCell class])];
     [self.tableView registerClass:[RoomHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([RoomHeaderView class])];
+    
+    self.mockHeaderView = [[RoomHeaderView alloc] init];
     
     @weakify(self);
     UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
