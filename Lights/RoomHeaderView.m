@@ -75,6 +75,7 @@
     
     self.onButton.rac_command = viewModel.onCommand;
     self.offButton.rac_command = viewModel.offCommand;
+    self.editButton.rac_command = viewModel.editCommand;
 }
 
 @end

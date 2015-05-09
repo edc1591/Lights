@@ -152,6 +152,44 @@
         }];
     
     [[RACObserve(self.viewModel, viewModels)
+        flattenMap:^RACSignal *(NSArray *viewModels) {
+            return [[[viewModels.rac_sequence
+                map:^RACSignal *(RoomViewModel *viewModel) {
+                    return [[viewModel.editCommand
+                        executionSignals]
+                        switchToLatest];
+                }]
+                signalWithScheduler:[RACScheduler mainThreadScheduler]]
+                flatten];
+        }]
+        subscribeNext:^(RoomViewModel *roomViewModel) {
+            @strongify(self);
+            
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:roomViewModel.name message:NSLocalizedString(@"Which action would you like to perform?", nil) preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Delete", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                [self.viewModel.removeRoomCommand execute:roomViewModel];
+            }];
+            [alertController addAction:deleteAction];
+            UIAlertAction *renameAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Rename", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                UIAlertController *renameAlertController = [UIAlertController alertControllerWithTitle:roomViewModel.name message:NSLocalizedString(@"Enter a new name for this room.", nil) preferredStyle:UIAlertControllerStyleAlert];
+                [renameAlertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                    textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+                }];
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                    [self.viewModel.renameRoomCommand execute:RACTuplePack(roomViewModel, [[renameAlertController.textFields firstObject] text])];
+                }];
+                [renameAlertController addAction:okAction];
+                UIAlertAction *cancelRenameAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleDefault handler:nil];
+                [renameAlertController addAction:cancelRenameAction];
+                [self presentViewController:renameAlertController animated:YES completion:nil];
+            }];
+            [alertController addAction:renameAction];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:cancelAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }];
+    
+    [[RACObserve(self.viewModel, viewModels)
         mapReplace:self.tableView]
         subscribeNext:^(UITableView *tableView) {
             [tableView reloadData];

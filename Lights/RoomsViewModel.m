@@ -51,13 +51,19 @@
             return [self.homeController removeRoom:viewModel.room];
         }];
         
+        _renameRoomCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(RACTuple *t) {
+            @strongify(self);
+            RACTupleUnpack(RoomViewModel *roomViewModel, NSString *name) = t;
+            return [self.homeController renameRoom:roomViewModel.room withName:name];
+        }];
+        
         _scanAccessoriesCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
             AccessoriesController *accessoriesController = [[AccessoriesController alloc] init];
             AccessoriesViewModel *viewModel = [[AccessoriesViewModel alloc] initWithAccessoriesController:accessoriesController homeController:homeController];
             return [RACSignal return:viewModel];
         }];
         
-        [[[RACObserve(self, viewModels)
+        [[[[RACObserve(self, viewModels)
             flattenMap:^RACSignal *(NSArray *viewModels) {
                 return [[viewModels.rac_sequence
                     map:^RACSignal *(RoomViewModel *viewModel) {
@@ -66,6 +72,7 @@
                     signalWithScheduler:[RACScheduler mainThreadScheduler]];
             }]
             flatten]
+            merge:[RACSignal merge:@[self.addRoomCommand.errors, self.removeRoomCommand.errors, self.renameRoomCommand.errors]]]
             subscribe:self.errors];
     }
     return self;

@@ -12,6 +12,7 @@
 
 - (RACSignal *)rac_addRoomWithName:(NSString *)name;
 - (RACSignal *)rac_removeRoom:(HMRoom *)room;
+- (RACSignal *)rac_renameRoom:(HMRoom *)room withName:(NSString *)name;
 - (RACSignal *)rac_addAccessory:(HMAccessory *)accessory;
 - (RACSignal *)rac_removeAccessory:(HMAccessory *)accessory;
 - (RACSignal *)rac_assignAccessory:(HMAccessory *)accessory toRoom:(HMRoom *)room;

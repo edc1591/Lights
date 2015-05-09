@@ -53,6 +53,15 @@
                 }];
 }
 
+- (RACSignal *)renameRoom:(HMRoom *)room withName:(NSString *)name {
+    @weakify(self);
+    return [[self.home rac_renameRoom:room withName:name]
+        doCompleted:^{
+            @strongify(self);
+            self.rooms = self.home.rooms;
+        }];
+}
+
 - (RACSignal *)addAccessory:(HMAccessory *)accessory {
     @weakify(self);
     return [[self.home rac_addAccessory:accessory]

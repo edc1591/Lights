@@ -20,6 +20,10 @@
 
 @property (nonatomic, readonly) RACCommand *onCommand;
 @property (nonatomic, readonly) RACCommand *offCommand;
+@property (nonatomic, readonly) RACCommand *editCommand;
+
+/// Input: NSString
+@property (nonatomic, readonly) RACCommand *renameCommand;
 
 - (instancetype)initWithRoom:(HMRoom *)room homeController:(HomeController *)homeController;
 

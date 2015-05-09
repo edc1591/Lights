@@ -73,6 +73,11 @@
                 flatten];
         }];
         
+        _editCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
+            @strongify(self);
+            return [RACSignal return:self];
+        }];
+        
         [[[RACObserve(self, viewModels)
             flattenMap:^RACSignal *(NSArray *viewModels) {
                 return [[viewModels.rac_sequence

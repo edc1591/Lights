@@ -18,6 +18,10 @@
 
 @property (nonatomic, readonly) RACCommand *addRoomCommand;
 @property (nonatomic, readonly) RACCommand *removeRoomCommand;
+
+/// Input: RACTuple, RoomViewModel and NSString
+@property (nonatomic, readonly) RACCommand *renameRoomCommand;
+
 @property (nonatomic, readonly) RACCommand *scanAccessoriesCommand;
 
 - (instancetype)initWithHomeController:(HomeController *)homeController;

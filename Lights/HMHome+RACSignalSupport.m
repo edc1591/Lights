@@ -39,6 +39,20 @@
     }];
 }
 
+- (RACSignal *)rac_renameRoom:(HMRoom *)room withName:(NSString *)name {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [room updateName:name completionHandler:^(NSError *error) {
+            if (error != nil) {
+                [subscriber sendError:error];
+            } else {
+                [subscriber sendCompleted];
+            }
+        }];
+        
+        return nil;
+    }];
+}
+
 - (RACSignal *)rac_addAccessory:(HMAccessory *)accessory {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [self addAccessory:accessory completionHandler:^(NSError *error) {
