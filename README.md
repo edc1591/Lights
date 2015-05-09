@@ -2,6 +2,8 @@
 
 **Lights** is an iOS application for controlling HomeKit lights. **Lights** is architected using [Timehop-style MVVM](https://speakerdeck.com/twocentstudios/mvvm-architecture-at-timehop) with [ReactiveCocoa](https://github.com/reactivecocoa/reactivecocoa).
 
+![](http://i.imgur.com/1BNplV4.gif)
+
 ## Getting Started
 
 1. Clone the repository `$ git clone https://github.com/edc1591/Lights.git`
