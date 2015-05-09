@@ -18,6 +18,8 @@
 @property (nonatomic, readonly) NSNumber *brightness;
 @property (nonatomic, readonly) UIColor *statusColor;
 
+@property (nonatomic, readonly) BOOL showsDetailButton;
+
 @property (nonatomic, readonly) RACCommand *pairAccessoryCommand;
 @property (nonatomic, readonly) RACCommand *deleteAccessoryCommand;
 @property (nonatomic, readonly) RACCommand *renameAccessoryCommand;
@@ -26,6 +28,6 @@
 @property (nonatomic, readonly) RACCommand *offCommand;
 @property (nonatomic, readonly) RACCommand *setBrightnessCommand;
 
-- (instancetype)initWithAccessory:(HMAccessory *)accessory homeController:(HomeController *)homeController;
+- (instancetype)initWithAccessory:(HMAccessory *)accessory allowEditing:(BOOL)allowEditing homeController:(HomeController *)homeController;
 
 @end

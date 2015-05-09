@@ -19,7 +19,6 @@
     if (self != nil) {
         @weakify(self);
         
-        self.accessoryType = UITableViewCellAccessoryDetailButton;
         self.textLabel.font = [UIFont lights_regularFontWithSize:18];
         [self setDefaultColor:[UIColor flatGrayColor]];
         
@@ -45,6 +44,11 @@
         
         RAC(self.textLabel, text) = RACObserve(self, viewModel.name);
         RAC(self.textLabel, textColor) = RACObserve(self, viewModel.statusColor);
+        RAC(self, accessoryType) =
+            [RACObserve(self, viewModel.showsDetailButton)
+                map:^NSNumber *(NSNumber *showsDetailButton) {
+                    return [showsDetailButton boolValue] ? @(UITableViewCellAccessoryDetailButton) : @(UITableViewCellAccessoryNone);
+                }];
     }
     return self;
 }

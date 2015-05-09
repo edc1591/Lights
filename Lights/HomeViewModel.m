@@ -35,7 +35,7 @@
                 map:^NSArray *(NSArray *accessories) {
                     return [[accessories.rac_sequence
                                 map:^AccessoryViewModel *(HMAccessory *accessory) {
-                                    return [[AccessoryViewModel alloc] initWithAccessory:accessory homeController:homeController];
+                                    return [[AccessoryViewModel alloc] initWithAccessory:accessory allowEditing:YES homeController:homeController];
                                 }]
                                 array];
                 }];

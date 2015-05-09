@@ -25,11 +25,12 @@
 
 @implementation AccessoryViewModel
 
-- (instancetype)initWithAccessory:(HMAccessory *)accessory homeController:(HomeController *)homeController {
+- (instancetype)initWithAccessory:(HMAccessory *)accessory allowEditing:(BOOL)allowEditing homeController:(HomeController *)homeController {
     self = [super init];
     if (self != nil) {
         _accessory = accessory;
         _accessory.delegate = self;
+        _showsDetailButton = allowEditing;
         
         RAC(self, name) = RACObserve(self.accessory, name);
         
@@ -50,15 +51,8 @@
         @weakify(self);
         _pairAccessoryCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(RoomViewModel *roomViewModel) {
             @strongify(self);
-            return [[[homeController addAccessory:self.accessory]
-                        materialize]
-                        flattenMap:^RACSignal *(RACEvent *event) {
-                            if (event.eventType == RACEventTypeCompleted) {
-                                return [homeController assignAccessory:self.accessory toRoom:roomViewModel.room];
-                            } else {
-                                return [RACSignal error:event.error];
-                            }
-                        }];
+            return [[homeController addAccessory:self.accessory]
+                concat:[homeController assignAccessory:self.accessory toRoom:roomViewModel.room]];
         }];
         
         _deleteAccessoryCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
