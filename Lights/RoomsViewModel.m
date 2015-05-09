@@ -34,11 +34,11 @@
             [RACObserve(self.homeController, rooms)
                 map:^NSArray *(NSArray *rooms) {
                     return [[rooms.rac_sequence
-                                map:^RoomViewModel *(HMRoom *room) {
-                                    @strongify(self);
-                                    return [[RoomViewModel alloc] initWithRoom:room homeController:self.homeController];
-                                }]
-                                array];
+                        map:^RoomViewModel *(HMRoom *room) {
+                            @strongify(self);
+                            return [[RoomViewModel alloc] initWithRoom:room homeController:self.homeController];
+                        }]
+                        array];
                 }];
         
         _addRoomCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *name) {

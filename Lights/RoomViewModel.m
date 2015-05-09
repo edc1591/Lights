@@ -31,37 +31,37 @@
             [RACObserve(room, accessories)
                 map:^NSArray *(NSArray *accessories) {
                     return [[accessories.rac_sequence
-                                map:^AccessoryViewModel *(HMAccessory *accessory) {
-                                    return [[AccessoryViewModel alloc] initWithAccessory:accessory homeController:homeController];
-                                }]
-                                array];
+                        map:^AccessoryViewModel *(HMAccessory *accessory) {
+                            return [[AccessoryViewModel alloc] initWithAccessory:accessory homeController:homeController];
+                        }]
+                        array];
                 }];
         
         @weakify(self);
         _onCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
             @strongify(self);
             return [[[[self.viewModels.rac_sequence
-                        map:^RACCommand *(AccessoryViewModel *viewModel) {
-                            return viewModel.onCommand;
-                        }]
-                        signal]
-                        flattenMap:^RACSignal *(RACCommand *command) {
-                            return [command execute:nil];
-                        }]
-                        flatten];
+                map:^RACCommand *(AccessoryViewModel *viewModel) {
+                    return viewModel.onCommand;
+                }]
+                signal]
+                flattenMap:^RACSignal *(RACCommand *command) {
+                    return [command execute:nil];
+                }]
+                flatten];
         }];
         
         _offCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id _) {
             @strongify(self);
             return [[[[self.viewModels.rac_sequence
-                        map:^RACCommand *(AccessoryViewModel *viewModel) {
-                            return viewModel.offCommand;
-                        }]
-                        signal]
-                        flattenMap:^RACSignal *(RACCommand *command) {
-                            return [command execute:nil];
-                        }]
-                        flatten];
+                map:^RACCommand *(AccessoryViewModel *viewModel) {
+                    return viewModel.offCommand;
+                }]
+                signal]
+                flattenMap:^RACSignal *(RACCommand *command) {
+                    return [command execute:nil];
+                }]
+                flatten];
         }];
         
         [[[RACObserve(self, viewModels)
