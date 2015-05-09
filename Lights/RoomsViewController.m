@@ -98,23 +98,21 @@
     self.navigationItem.rightBarButtonItem = addItem;
     
     TableView *tableView = (TableView *)self.tableView;
-    [[[[[[RACObserve(tableView, holdIndexPath)
+    [[[[[[[RACObserve(tableView, holdIndexPath)
         doNext:^(NSIndexPath *indexPath) {
             @strongify(self);
             if (indexPath == nil) {
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
         }]
-        filter:^BOOL(NSIndexPath *indexPath) {
-            return (indexPath != nil);
-        }]
+        ignore:nil]
         map:^AccessoryViewModel *(NSIndexPath *indexPath) {
             RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
             AccessoryViewModel *accessoryViewModel = roomViewModel.viewModels[indexPath.row];
             return accessoryViewModel;
         }]
         combineLatestWith:[RACSignal return:tableView]]
-        tryMap:^BrightnessViewController *(RACTuple *t, NSError *__autoreleasing *errorPtr) {
+        map:^BrightnessViewController *(RACTuple *t) {
             RACTupleUnpack(AccessoryViewModel *accessoryViewModel, TableView *tableView) = t;
             if ([accessoryViewModel.brightness isEqualToNumber:@-1]) {
                 return nil;
@@ -138,6 +136,7 @@
             vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
             return vc;
         }]
+        ignore:nil]
         subscribeNext:^(UIViewController *viewController) {
             @strongify(self);
             [self presentViewController:viewController animated:YES completion:nil];
