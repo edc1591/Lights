@@ -171,7 +171,9 @@
     [alertController addAction:deleteAction];
     UIAlertAction *renameAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Rename", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         UIAlertController *renameAlertController = [UIAlertController alertControllerWithTitle:accessoryViewModel.name message:NSLocalizedString(@"Enter a new name for this accessory.", nil) preferredStyle:UIAlertControllerStyleAlert];
-        [renameAlertController addTextFieldWithConfigurationHandler:nil];
+        [renameAlertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+            textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+        }];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             [accessoryViewModel.renameAccessoryCommand execute:[[renameAlertController.textFields firstObject] text]];
         }];
