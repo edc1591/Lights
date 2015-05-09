@@ -13,12 +13,14 @@
 #import "AccessoryCell.h"
 #import "RoomHeaderView.h"
 #import "BrightnessViewController.h"
+#import "EmptyCell.h"
 
 #import "HomeViewModel.h"
 #import "RoomsViewModel.h"
 #import "RoomViewModel.h"
 #import "AccessoryViewModel.h"
 #import "AccessoriesViewModel.h"
+#import "EmptyViewModel.h"
 
 @interface RoomsViewController ()
 
@@ -56,6 +58,7 @@
         
     [self.tableView registerClass:[AccessoryCell class] forCellReuseIdentifier:NSStringFromClass([AccessoryCell class])];
     [self.tableView registerClass:[RoomHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([RoomHeaderView class])];
+    [self.tableView registerClass:[EmptyCell class] forCellReuseIdentifier:NSStringFromClass([EmptyCell class])];
     
     self.mockHeaderView = [[RoomHeaderView alloc] init];
     
@@ -198,7 +201,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 68.0;
+    RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
+    ViewModel *viewModel = roomViewModel.viewModels[indexPath.row];
+    return ([viewModel isKindOfClass:[AccessoryViewModel class]]) ? 68.0 : 44.0;
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -217,13 +222,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AccessoryCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AccessoryCell class]) forIndexPath:indexPath];
-    
     RoomViewModel *roomViewModel = self.viewModel.viewModels[indexPath.section];
-    AccessoryViewModel *accessoryViewModel = roomViewModel.viewModels[indexPath.row];
-    cell.viewModel = accessoryViewModel;
+    ViewModel *viewModel = roomViewModel.viewModels[indexPath.row];
     
-    return cell;
+    if ([viewModel isKindOfClass:[AccessoryViewModel class]]) {
+        AccessoryCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AccessoryCell class]) forIndexPath:indexPath];
+        cell.viewModel = (AccessoryViewModel *)viewModel;
+        return cell;
+    } else if ([viewModel isKindOfClass:[EmptyViewModel class]]) {
+        EmptyCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([EmptyCell class]) forIndexPath:indexPath];
+        cell.viewModel = (EmptyViewModel *)viewModel;
+        return cell;
+    }
+    
+    return nil;
 }
 
 //- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -14,6 +14,7 @@
 		206880F01A15B4470006C098 /* BrightnessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880EF1A15B4470006C098 /* BrightnessViewController.m */; };
 		206880F31A16F6130006C098 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880F21A16F6130006C098 /* TableView.m */; };
 		207FCE441A34FBA2006CE019 /* NSError+HomeKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FCE431A34FBA2006CE019 /* NSError+HomeKitExtensions.m */; };
+		2085FB751AFE66F9001C5942 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2085FB741AFE66F9001C5942 /* EmptyCell.m */; };
 		20DD20C61A10238B0036F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C51A10238B0036F12E /* main.m */; };
 		20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C81A10238B0036F12E /* AppDelegate.m */; };
 		20DD20D11A10238B0036F12E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DD20D01A10238B0036F12E /* Images.xcassets */; };
@@ -66,6 +67,8 @@
 		206880F21A16F6130006C098 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
 		207FCE421A34FBA2006CE019 /* NSError+HomeKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+HomeKitExtensions.h"; sourceTree = "<group>"; };
 		207FCE431A34FBA2006CE019 /* NSError+HomeKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+HomeKitExtensions.m"; sourceTree = "<group>"; };
+		2085FB731AFE66F9001C5942 /* EmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyCell.h; sourceTree = "<group>"; };
+		2085FB741AFE66F9001C5942 /* EmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyCell.m; sourceTree = "<group>"; };
 		20DD20C01A10238B0036F12E /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DD20C41A10238B0036F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DD20C51A10238B0036F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				20DD21241A12FF3F0036F12E /* RoomHeaderView.m */,
 				20DD21261A13027F0036F12E /* AccessoryCell.h */,
 				20DD21271A13027F0036F12E /* AccessoryCell.m */,
+				2085FB731AFE66F9001C5942 /* EmptyCell.h */,
+				2085FB741AFE66F9001C5942 /* EmptyCell.m */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				206880E71A159A2A0006C098 /* TableViewController.m in Sources */,
+				2085FB751AFE66F9001C5942 /* EmptyCell.m in Sources */,
 				20DD21281A13027F0036F12E /* AccessoryCell.m in Sources */,
 				20DD21021A1026100036F12E /* HomesViewModel.m in Sources */,
 				20DD211B1A105A450036F12E /* AccessoriesController.m in Sources */,

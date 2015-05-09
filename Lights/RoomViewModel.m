@@ -9,6 +9,7 @@
 #import "RoomViewModel.h"
 
 #import "AccessoryViewModel.h"
+#import "EmptyViewModel.h"
 
 #import "HomeController.h"
 
@@ -28,13 +29,21 @@
         _name = room.name;
         
         RAC(self, viewModels) =
-            [RACObserve(room, accessories)
+            [[RACObserve(room, accessories)
                 map:^NSArray *(NSArray *accessories) {
                     return [[accessories.rac_sequence
                         map:^AccessoryViewModel *(HMAccessory *accessory) {
                             return [[AccessoryViewModel alloc] initWithAccessory:accessory homeController:homeController];
                         }]
                         array];
+                }]
+                map:^NSArray *(NSArray *accessories) {
+                    if ([accessories count] == 0) {
+                        EmptyViewModel *emptyViewModel = [[EmptyViewModel alloc] initWithTitle:NSLocalizedString(@"No accessories!", nil) message:NSLocalizedString(@"Tap the plus icon in the top right to add one.", nil) actionCommand:nil];
+                        return @[emptyViewModel];
+                    } else {
+                        return accessories;
+                    }
                 }];
         
         @weakify(self);
