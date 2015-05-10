@@ -93,7 +93,7 @@
     [[[[[self.viewModel.addHomeCommand executionSignals]
         switchToLatest]
         mapReplace:self.tableView]
-        deliverOn:RACScheduler.mainThreadScheduler]
+        deliverOnMainThread]
         subscribeNext:^(UITableView *tableView) {
             [tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
         }];
