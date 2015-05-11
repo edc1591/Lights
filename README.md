@@ -1,6 +1,6 @@
 # Lights
 
-**Lights** is an iOS application for controlling HomeKit lights. **Lights** is architected using [Timehop-style MVVM](https://speakerdeck.com/twocentstudios/mvvm-architecture-at-timehop) with [ReactiveCocoa](https://github.com/reactivecocoa/reactivecocoa).
+**Lights** is an iOS (iPhone and Apple Watch) application for controlling HomeKit lights. **Lights** is architected using [Timehop-style MVVM](https://speakerdeck.com/twocentstudios/mvvm-architecture-at-timehop) with [ReactiveCocoa](https://github.com/reactivecocoa/reactivecocoa).
 
 [Demo](http://i.imgur.com/FiOTfG3.gifv)
 
