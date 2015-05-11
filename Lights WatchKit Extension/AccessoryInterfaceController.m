@@ -27,6 +27,7 @@
     self.viewModel = (AccessoryViewModel *)context;
     
     [self.nameLabel setText:self.viewModel.name];
+    [self setTitle:self.viewModel.roomName];
     
     @weakify(self);
     

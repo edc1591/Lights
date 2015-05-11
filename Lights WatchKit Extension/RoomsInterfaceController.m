@@ -29,7 +29,6 @@
 /// Never errors. Completes on dealloc.
 @property (nonatomic) RACSubject *homeControllersSubject;
 
-@property (nonatomic, weak) IBOutlet WKInterfaceLabel *homeLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceTable *tableView;
 
 @end
@@ -70,7 +69,7 @@
             }]
             doNext:^(RoomsViewModel *viewModel) {
                 @strongify(self);
-                [self.homeLabel setText:viewModel.homeName];
+                [self setTitle:viewModel.homeName];
             }];
     
     [RACObserve(self, viewModel.viewModels)

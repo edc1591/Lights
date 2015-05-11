@@ -29,6 +29,7 @@
     
     self.viewModel = (RoomViewModel *)context;
     
+    [self setTitle:self.viewModel.homeName];
     [self.nameLabel setText:self.viewModel.name];
     
     @weakify(self);

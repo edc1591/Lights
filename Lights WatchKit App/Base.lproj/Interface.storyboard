@@ -116,7 +116,6 @@
             <objects>
                 <controller id="t7l-sI-IuE" customClass="RoomsInterfaceController">
                     <items>
-                        <label alignment="left" text="Label" id="bqs-Ee-ge3"/>
                         <table alignment="left" id="UDW-0K-A62">
                             <items>
                                 <tableRow identifier="RoomTableRowController" id="PP6-Aa-GWb" customClass="RoomTableRowController">
@@ -134,7 +133,6 @@
                         </table>
                     </items>
                     <connections>
-                        <outlet property="homeLabel" destination="bqs-Ee-ge3" id="4z6-w2-c8X"/>
                         <outlet property="tableView" destination="UDW-0K-A62" id="1yS-9i-eJP"/>
                     </connections>
                 </controller>

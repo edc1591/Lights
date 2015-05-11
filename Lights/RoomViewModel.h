@@ -14,6 +14,7 @@
 
 @property (nonatomic, readonly) HMRoom *room;
 
+@property (nonatomic, readonly) NSString *homeName;
 @property (nonatomic, readonly) NSString *name;
 
 @property (nonatomic, readonly) NSArray *viewModels;

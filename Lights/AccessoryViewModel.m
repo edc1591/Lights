@@ -32,6 +32,8 @@
         _accessory.delegate = self;
         _showsDetailButton = allowEditing;
         
+        _roomName = accessory.room.name;
+        
         RAC(self, name) = RACObserve(self.accessory, name);
         
         RAC(self, brightness) =

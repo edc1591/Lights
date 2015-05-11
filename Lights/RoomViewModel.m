@@ -26,6 +26,7 @@
     if (self != nil) {
         _room = room;
         
+        _homeName = homeController.home.name;
         _name = room.name;
         
         RAC(self, viewModels) =
