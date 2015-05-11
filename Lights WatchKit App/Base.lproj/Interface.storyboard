@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t7l-sI-IuE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Room Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="RoomInterfaceController">
+                    <items>
+                        <label alignment="left" text="Label" textAlignment="center" id="PVP-Qv-aGk"/>
+                        <group width="1" alignment="left" id="uwM-tE-fQI">
+                            <items>
+                                <button width="0.5" alignment="left" verticalAlignment="bottom" title="On" id="rMc-6u-bAC">
+                                    <connections>
+                                        <action selector="handleOn" destination="AgC-eL-Hgc" id="SZo-0s-ceK"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="right" verticalAlignment="bottom" title="Off" id="N0C-sP-GvS">
+                                    <connections>
+                                        <action selector="handleOff" destination="AgC-eL-Hgc" id="R2w-b0-yxi"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" alpha="0.29999999999999966" id="tXD-Of-fr5">
+                            <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <table alignment="left" id="WxK-X7-Kwh">
+                            <items>
+                                <tableRow identifier="AccessoryTableRowController" id="P6h-Pd-cUs" customClass="AccessoryTableRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="92N-Jt-94P">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" numberOfLines="0" id="jhs-2e-v6t">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="jhs-2e-v6t" id="PyL-iW-eCu"/>
+                                        <segue destination="D0X-pc-WdF" kind="push" id="cRC-Xz-Tw9"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="nameLabel" destination="PVP-Qv-aGk" id="xU0-8p-4OJ"/>
+                        <outlet property="tableView" destination="WxK-X7-Kwh" id="ZuR-tC-dUz"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="412" y="341"/>
+        </scene>
+        <!--Accessory Interface Controller-->
+        <scene sceneID="3TP-YD-k8q">
+            <objects>
+                <controller id="D0X-pc-WdF" customClass="AccessoryInterfaceController">
+                    <items>
+                        <label width="1" alignment="left" text="Label" id="5iU-uE-Yhv"/>
+                        <button width="1" alignment="left" title="On" id="3Yz-qO-s5Z">
+                            <connections>
+                                <action selector="handleOn" destination="D0X-pc-WdF" id="huC-0u-VgE"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Off" id="iSg-7u-hE1">
+                            <connections>
+                                <action selector="handleOff" destination="D0X-pc-WdF" id="IW1-eu-ybv"/>
+                            </connections>
+                        </button>
+                        <slider width="1" alignment="left" continuous="YES" value="50" maximum="100" steps="4" id="ywD-wt-2My">
+                            <connections>
+                                <action selector="handleBrightness:" destination="D0X-pc-WdF" id="ohW-xq-49e"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="brightnessSlider" destination="ywD-wt-2My" id="fMU-O1-vcg"/>
+                        <outlet property="nameLabel" destination="5iU-uE-Yhv" id="rXz-xq-G74"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="636" y="341"/>
+        </scene>
+        <!--Rooms Interface Controller-->
+        <scene sceneID="a1f-tn-xDc">
+            <objects>
+                <controller id="t7l-sI-IuE" customClass="RoomsInterfaceController">
+                    <items>
+                        <label alignment="left" text="Label" id="bqs-Ee-ge3"/>
+                        <table alignment="left" id="UDW-0K-A62">
+                            <items>
+                                <tableRow identifier="RoomTableRowController" id="PP6-Aa-GWb" customClass="RoomTableRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="moH-vZ-cUf">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="hIo-3O-TvO"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="hIo-3O-TvO" id="vc3-yd-9wh"/>
+                                        <segue destination="AgC-eL-Hgc" kind="push" id="2rO-Di-738"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="homeLabel" destination="bqs-Ee-ge3" id="4z6-w2-c8X"/>
+                        <outlet property="tableView" destination="UDW-0K-A62" id="1yS-9i-eJP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="167" y="341"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

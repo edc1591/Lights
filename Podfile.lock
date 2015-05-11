@@ -46,11 +46,11 @@ PODS:
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
-  - ChameleonFramework
-  - libextobjc
-  - MCSwipeTableViewCell
-  - PureLayout
-  - ReactiveCocoa
+  - ChameleonFramework (= 1.1.1)
+  - libextobjc (= 0.4.1)
+  - MCSwipeTableViewCell (= 2.1.2)
+  - PureLayout (= 2.0.1)
+  - ReactiveCocoa (= 2.5.0)
 
 SPEC CHECKSUMS:
   ChameleonFramework: f824d2afa52182302ef72c706dfe5a8f0597f644

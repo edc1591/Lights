@@ -15,6 +15,32 @@
 		206880F31A16F6130006C098 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880F21A16F6130006C098 /* TableView.m */; };
 		207FCE441A34FBA2006CE019 /* NSError+HomeKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FCE431A34FBA2006CE019 /* NSError+HomeKitExtensions.m */; };
 		2085FB751AFE66F9001C5942 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2085FB741AFE66F9001C5942 /* EmptyCell.m */; };
+		20C08F671AFF027E00253603 /* RoomInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08F661AFF027E00253603 /* RoomInterfaceController.m */; };
+		20C08F6A1AFF027E00253603 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08F691AFF027E00253603 /* NotificationController.m */; };
+		20C08F6C1AFF027E00253603 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C08F6B1AFF027E00253603 /* Images.xcassets */; };
+		20C08F701AFF027E00253603 /* Lights WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 20C08F6F1AFF027E00253603 /* Lights WatchKit App.app */; };
+		20C08F781AFF027E00253603 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C08F761AFF027E00253603 /* Interface.storyboard */; };
+		20C08F7A1AFF027E00253603 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C08F791AFF027E00253603 /* Images.xcassets */; };
+		20C08F7D1AFF027E00253603 /* Lights WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 20C08F601AFF027E00253603 /* Lights WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		20C08F861AFF111100253603 /* HomesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21201A11B0B40036F12E /* HomesController.m */; };
+		20C08F871AFF111100253603 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21071A1027610036F12E /* HomeController.m */; };
+		20C08F891AFF111100253603 /* HMHomeManager+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20F31A1025830036F12E /* HMHomeManager+RACSignalSupport.m */; };
+		20C08F8A1AFF111100253603 /* HMHome+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20F81A1025B10036F12E /* HMHome+RACSignalSupport.m */; };
+		20C08F8B1AFF111100253603 /* HMAccessory+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880DD1A1460C80006C098 /* HMAccessory+RACSignalSupport.m */; };
+		20C08F8C1AFF111100253603 /* HMCharacteristic+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 206880DA1A145C990006C098 /* HMCharacteristic+RACSignalSupport.m */; };
+		20C08F8D1AFF111100253603 /* NSError+HomeKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FCE431A34FBA2006CE019 /* NSError+HomeKitExtensions.m */; };
+		20C08F8E1AFF12EB00253603 /* RoomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21111A104ED60036F12E /* RoomViewModel.m */; };
+		20C08F8F1AFF130000253603 /* AccessoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD211D1A105C8E0036F12E /* AccessoryViewModel.m */; };
+		20C08F901AFF130900253603 /* EmptyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD210E1A10326D0036F12E /* EmptyViewModel.m */; };
+		20C08F931AFF147D00253603 /* AccessoryTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08F921AFF147D00253603 /* AccessoryTableRowController.m */; };
+		20C08F941AFF165000253603 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 204406921AD07DD8007B704F /* ViewModel.m */; };
+		20C08F951AFF18CD00253603 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DD20EF1A1024C20036F12E /* HomeKit.framework */; };
+		20C08F991AFFB2E900253603 /* RoomsInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08F981AFFB2E900253603 /* RoomsInterfaceController.m */; };
+		20C08F9C1AFFB33500253603 /* RoomTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08F9B1AFFB33500253603 /* RoomTableRowController.m */; };
+		20C08F9D1AFFB3AC00253603 /* RoomsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21041A10261A0036F12E /* RoomsViewModel.m */; };
+		20C08F9E1AFFB49200253603 /* AccessoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21171A1059F30036F12E /* AccessoriesViewModel.m */; };
+		20C08F9F1AFFB49200253603 /* AccessoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD211A1A105A450036F12E /* AccessoriesController.m */; };
+		20C08FA21AFFB6A000253603 /* AccessoryInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08FA11AFFB6A000253603 /* AccessoryInterfaceController.m */; };
 		20DD20C61A10238B0036F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C51A10238B0036F12E /* main.m */; };
 		20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C81A10238B0036F12E /* AppDelegate.m */; };
 		20DD20D11A10238B0036F12E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DD20D01A10238B0036F12E /* Images.xcassets */; };
@@ -39,10 +65,25 @@
 		20DD21251A12FF3F0036F12E /* RoomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21241A12FF3F0036F12E /* RoomHeaderView.m */; };
 		20DD21281A13027F0036F12E /* AccessoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21271A13027F0036F12E /* AccessoryCell.m */; };
 		20DD212B1A130CBC0036F12E /* UIFont+Lights.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD212A1A130CBC0036F12E /* UIFont+Lights.m */; };
-		8EFF75263827B27A4556D430 /* libPods-Lights.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606132ED3E6C3616D16A026C /* libPods-Lights.a */; };
+		2C01618B6971427A99EF2003 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5A56ED3EB8B4319CE8FBD8 /* libPods.a */; };
+		BAB1598238B9BF6C76CE9D74 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5A56ED3EB8B4319CE8FBD8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		20C08F711AFF027E00253603 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20DD20B81A10238B0036F12E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20C08F6E1AFF027E00253603;
+			remoteInfo = "Lights WatchKit App";
+		};
+		20C08F7B1AFF027E00253603 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20DD20B81A10238B0036F12E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20C08F5F1AFF027E00253603;
+			remoteInfo = "Lights WatchKit Extension";
+		};
 		20DD20DA1A10238B0036F12E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 20DD20B81A10238B0036F12E /* Project object */;
@@ -52,7 +93,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		20C08F841AFF027E00253603 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				20C08F7D1AFF027E00253603 /* Lights WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0F5A56ED3EB8B4319CE8FBD8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		204406911AD07DD8007B704F /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		204406921AD07DD8007B704F /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		206880D91A145C990006C098 /* HMCharacteristic+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMCharacteristic+RACSignalSupport.h"; sourceTree = "<group>"; };
@@ -69,6 +125,28 @@
 		207FCE431A34FBA2006CE019 /* NSError+HomeKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+HomeKitExtensions.m"; sourceTree = "<group>"; };
 		2085FB731AFE66F9001C5942 /* EmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyCell.h; sourceTree = "<group>"; };
 		2085FB741AFE66F9001C5942 /* EmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyCell.m; sourceTree = "<group>"; };
+		20C08F601AFF027E00253603 /* Lights WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Lights WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C08F631AFF027E00253603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C08F641AFF027E00253603 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		20C08F651AFF027E00253603 /* RoomInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomInterfaceController.h; sourceTree = "<group>"; };
+		20C08F661AFF027E00253603 /* RoomInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoomInterfaceController.m; sourceTree = "<group>"; };
+		20C08F681AFF027E00253603 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		20C08F691AFF027E00253603 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		20C08F6B1AFF027E00253603 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		20C08F6F1AFF027E00253603 /* Lights WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lights WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C08F751AFF027E00253603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C08F771AFF027E00253603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		20C08F791AFF027E00253603 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		20C08F851AFF108600253603 /* LightsWatchKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LightsWatchKit-Prefix.pch"; sourceTree = "<group>"; };
+		20C08F911AFF147D00253603 /* AccessoryTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryTableRowController.h; sourceTree = "<group>"; };
+		20C08F921AFF147D00253603 /* AccessoryTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryTableRowController.m; sourceTree = "<group>"; };
+		20C08F961AFF18CD00253603 /* Lights WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Lights WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		20C08F971AFFB2E900253603 /* RoomsInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsInterfaceController.h; sourceTree = "<group>"; };
+		20C08F981AFFB2E900253603 /* RoomsInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsInterfaceController.m; sourceTree = "<group>"; };
+		20C08F9A1AFFB33500253603 /* RoomTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomTableRowController.h; sourceTree = "<group>"; };
+		20C08F9B1AFFB33500253603 /* RoomTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomTableRowController.m; sourceTree = "<group>"; };
+		20C08FA01AFFB6A000253603 /* AccessoryInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryInterfaceController.h; sourceTree = "<group>"; };
+		20C08FA11AFFB6A000253603 /* AccessoryInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryInterfaceController.m; sourceTree = "<group>"; };
 		20DD20C01A10238B0036F12E /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DD20C41A10238B0036F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DD20C51A10238B0036F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,16 +198,27 @@
 		20DD212A1A130CBC0036F12E /* UIFont+Lights.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Lights.m"; sourceTree = "<group>"; };
 		606132ED3E6C3616D16A026C /* libPods-Lights.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lights.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6840377B50A259D5BF426DD4 /* Pods-Lights.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lights.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lights/Pods-Lights.release.xcconfig"; sourceTree = "<group>"; };
+		ABEEF6427CDEF6031A7A1F89 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DF7F4602DA4F4BFDEA8E4603 /* Pods-Lights.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lights.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lights/Pods-Lights.debug.xcconfig"; sourceTree = "<group>"; };
+		E4ABA421CB4ED1950D967E7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		20C08F5D1AFF027E00253603 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C08F951AFF18CD00253603 /* HomeKit.framework in Frameworks */,
+				BAB1598238B9BF6C76CE9D74 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20DD20BD1A10238B0036F12E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				20DD20F01A1024C20036F12E /* HomeKit.framework in Frameworks */,
-				8EFF75263827B27A4556D430 /* libPods-Lights.a in Frameworks */,
+				2C01618B6971427A99EF2003 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,11 +243,63 @@
 			name = Generic;
 			sourceTree = "<group>";
 		};
+		20C08F611AFF027E00253603 /* Lights WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				20C08F961AFF18CD00253603 /* Lights WatchKit Extension.entitlements */,
+				20C08F971AFFB2E900253603 /* RoomsInterfaceController.h */,
+				20C08F981AFFB2E900253603 /* RoomsInterfaceController.m */,
+				20C08F651AFF027E00253603 /* RoomInterfaceController.h */,
+				20C08F661AFF027E00253603 /* RoomInterfaceController.m */,
+				20C08FA01AFFB6A000253603 /* AccessoryInterfaceController.h */,
+				20C08FA11AFFB6A000253603 /* AccessoryInterfaceController.m */,
+				20C08F9A1AFFB33500253603 /* RoomTableRowController.h */,
+				20C08F9B1AFFB33500253603 /* RoomTableRowController.m */,
+				20C08F911AFF147D00253603 /* AccessoryTableRowController.h */,
+				20C08F921AFF147D00253603 /* AccessoryTableRowController.m */,
+				20C08F681AFF027E00253603 /* NotificationController.h */,
+				20C08F691AFF027E00253603 /* NotificationController.m */,
+				20C08F6B1AFF027E00253603 /* Images.xcassets */,
+				20C08F621AFF027E00253603 /* Supporting Files */,
+			);
+			path = "Lights WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		20C08F621AFF027E00253603 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20C08F631AFF027E00253603 /* Info.plist */,
+				20C08F641AFF027E00253603 /* PushNotificationPayload.apns */,
+				20C08F851AFF108600253603 /* LightsWatchKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20C08F731AFF027E00253603 /* Lights WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				20C08F761AFF027E00253603 /* Interface.storyboard */,
+				20C08F791AFF027E00253603 /* Images.xcassets */,
+				20C08F741AFF027E00253603 /* Supporting Files */,
+			);
+			path = "Lights WatchKit App";
+			sourceTree = "<group>";
+		};
+		20C08F741AFF027E00253603 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20C08F751AFF027E00253603 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		20DD20B71A10238B0036F12E = {
 			isa = PBXGroup;
 			children = (
 				20DD20C21A10238B0036F12E /* Lights */,
 				20DD20DC1A10238B0036F12E /* LightsTests */,
+				20C08F611AFF027E00253603 /* Lights WatchKit Extension */,
+				20C08F731AFF027E00253603 /* Lights WatchKit App */,
 				20DD20C11A10238B0036F12E /* Products */,
 				73535C0F1B147EA48B47FE81 /* Frameworks */,
 				49E7B638D76EE21D2E866169 /* Pods */,
@@ -170,6 +311,8 @@
 			children = (
 				20DD20C01A10238B0036F12E /* Lights.app */,
 				20DD20D91A10238B0036F12E /* LightsTests.xctest */,
+				20C08F601AFF027E00253603 /* Lights WatchKit Extension.appex */,
+				20C08F6F1AFF027E00253603 /* Lights WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -324,6 +467,8 @@
 			children = (
 				DF7F4602DA4F4BFDEA8E4603 /* Pods-Lights.debug.xcconfig */,
 				6840377B50A259D5BF426DD4 /* Pods-Lights.release.xcconfig */,
+				ABEEF6427CDEF6031A7A1F89 /* Pods.debug.xcconfig */,
+				E4ABA421CB4ED1950D967E7F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -333,6 +478,7 @@
 			children = (
 				20DD20EF1A1024C20036F12E /* HomeKit.framework */,
 				606132ED3E6C3616D16A026C /* libPods-Lights.a */,
+				0F5A56ED3EB8B4319CE8FBD8 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,6 +486,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		20C08F5F1AFF027E00253603 /* Lights WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C08F831AFF027E00253603 /* Build configuration list for PBXNativeTarget "Lights WatchKit Extension" */;
+			buildPhases = (
+				E12803D2482BC2D650721FAC /* Check Pods Manifest.lock */,
+				20C08F5C1AFF027E00253603 /* Sources */,
+				20C08F5D1AFF027E00253603 /* Frameworks */,
+				20C08F5E1AFF027E00253603 /* Resources */,
+				E3B646DB872532DAE0A8BF2A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20C08F721AFF027E00253603 /* PBXTargetDependency */,
+			);
+			name = "Lights WatchKit Extension";
+			productName = "Lights WatchKit Extension";
+			productReference = 20C08F601AFF027E00253603 /* Lights WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		20C08F6E1AFF027E00253603 /* Lights WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C08F821AFF027E00253603 /* Build configuration list for PBXNativeTarget "Lights WatchKit App" */;
+			buildPhases = (
+				20C08F6D1AFF027E00253603 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lights WatchKit App";
+			productName = "Lights WatchKit App";
+			productReference = 20C08F6F1AFF027E00253603 /* Lights WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		20DD20BF1A10238B0036F12E /* Lights */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20DD20E31A10238B0036F12E /* Build configuration list for PBXNativeTarget "Lights" */;
@@ -349,10 +530,12 @@
 				20DD20BD1A10238B0036F12E /* Frameworks */,
 				20DD20BE1A10238B0036F12E /* Resources */,
 				B73BBDB6B9867FDF19CDA033 /* Copy Pods Resources */,
+				20C08F841AFF027E00253603 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				20C08F7C1AFF027E00253603 /* PBXTargetDependency */,
 			);
 			name = Lights;
 			productName = Lights;
@@ -386,6 +569,19 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Evan Coleman";
 				TargetAttributes = {
+					20C08F5F1AFF027E00253603 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 52M9C6892K;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
+					};
+					20C08F6E1AFF027E00253603 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 52M9C6892K;
+					};
 					20DD20BF1A10238B0036F12E = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 52M9C6892K;
@@ -416,11 +612,31 @@
 			targets = (
 				20DD20BF1A10238B0036F12E /* Lights */,
 				20DD20D81A10238B0036F12E /* LightsTests */,
+				20C08F5F1AFF027E00253603 /* Lights WatchKit Extension */,
+				20C08F6E1AFF027E00253603 /* Lights WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		20C08F5E1AFF027E00253603 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C08F6C1AFF027E00253603 /* Images.xcassets in Resources */,
+				20C08F701AFF027E00253603 /* Lights WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C08F6D1AFF027E00253603 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C08F781AFF027E00253603 /* Interface.storyboard in Resources */,
+				20C08F7A1AFF027E00253603 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20DD20BE1A10238B0036F12E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,12 +683,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lights/Pods-Lights-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E12803D2482BC2D650721FAC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3B646DB872532DAE0A8BF2A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		20C08F5C1AFF027E00253603 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C08F9E1AFFB49200253603 /* AccessoriesViewModel.m in Sources */,
+				20C08F9F1AFFB49200253603 /* AccessoriesController.m in Sources */,
+				20C08F9D1AFFB3AC00253603 /* RoomsViewModel.m in Sources */,
+				20C08F941AFF165000253603 /* ViewModel.m in Sources */,
+				20C08F901AFF130900253603 /* EmptyViewModel.m in Sources */,
+				20C08F8F1AFF130000253603 /* AccessoryViewModel.m in Sources */,
+				20C08FA21AFFB6A000253603 /* AccessoryInterfaceController.m in Sources */,
+				20C08F8E1AFF12EB00253603 /* RoomViewModel.m in Sources */,
+				20C08F9C1AFFB33500253603 /* RoomTableRowController.m in Sources */,
+				20C08F861AFF111100253603 /* HomesController.m in Sources */,
+				20C08F871AFF111100253603 /* HomeController.m in Sources */,
+				20C08F891AFF111100253603 /* HMHomeManager+RACSignalSupport.m in Sources */,
+				20C08F8A1AFF111100253603 /* HMHome+RACSignalSupport.m in Sources */,
+				20C08F931AFF147D00253603 /* AccessoryTableRowController.m in Sources */,
+				20C08F8B1AFF111100253603 /* HMAccessory+RACSignalSupport.m in Sources */,
+				20C08F8C1AFF111100253603 /* HMCharacteristic+RACSignalSupport.m in Sources */,
+				20C08F8D1AFF111100253603 /* NSError+HomeKitExtensions.m in Sources */,
+				20C08F6A1AFF027E00253603 /* NotificationController.m in Sources */,
+				20C08F991AFFB2E900253603 /* RoomsInterfaceController.m in Sources */,
+				20C08F671AFF027E00253603 /* RoomInterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20DD20BC1A10238B0036F12E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,6 +792,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		20C08F721AFF027E00253603 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20C08F6E1AFF027E00253603 /* Lights WatchKit App */;
+			targetProxy = 20C08F711AFF027E00253603 /* PBXContainerItemProxy */;
+		};
+		20C08F7C1AFF027E00253603 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20C08F5F1AFF027E00253603 /* Lights WatchKit Extension */;
+			targetProxy = 20C08F7B1AFF027E00253603 /* PBXContainerItemProxy */;
+		};
 		20DD20DB1A10238B0036F12E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 20DD20BF1A10238B0036F12E /* Lights */;
@@ -527,6 +810,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		20C08F761AFF027E00253603 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C08F771AFF027E00253603 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		20DD20D21A10238B0036F12E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -538,6 +829,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		20C08F7E1AFF027E00253603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABEEF6427CDEF6031A7A1F89 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Lights WatchKit Extension/Lights WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Lights WatchKit Extension/LightsWatchKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lights WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		20C08F7F1AFF027E00253603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4ABA421CB4ED1950D967E7F /* Pods.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Lights WatchKit Extension/Lights WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Lights WatchKit Extension/LightsWatchKit-Prefix.pch";
+				INFOPLIST_FILE = "Lights WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		20C08F801AFF027E00253603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Lights_WatchKit_Extension;
+				INFOPLIST_FILE = "Lights WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		20C08F811AFF027E00253603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = Lights_WatchKit_Extension;
+				INFOPLIST_FILE = "Lights WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		20DD20E11A10238B0036F12E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -572,7 +949,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -608,7 +985,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -618,7 +995,7 @@
 		};
 		20DD20E41A10238B0036F12E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF7F4602DA4F4BFDEA8E4603 /* Pods-Lights.debug.xcconfig */;
+			baseConfigurationReference = ABEEF6427CDEF6031A7A1F89 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Lights/Lights.entitlements;
@@ -626,6 +1003,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "Lights/Lights-Prefix.pch";
 				INFOPLIST_FILE = Lights/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -634,7 +1012,7 @@
 		};
 		20DD20E51A10238B0036F12E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6840377B50A259D5BF426DD4 /* Pods-Lights.release.xcconfig */;
+			baseConfigurationReference = ABEEF6427CDEF6031A7A1F89 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Lights/Lights.entitlements;
@@ -642,6 +1020,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "Lights/Lights-Prefix.pch";
 				INFOPLIST_FILE = Lights/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -685,6 +1064,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20C08F821AFF027E00253603 /* Build configuration list for PBXNativeTarget "Lights WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C08F801AFF027E00253603 /* Debug */,
+				20C08F811AFF027E00253603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20C08F831AFF027E00253603 /* Build configuration list for PBXNativeTarget "Lights WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C08F7E1AFF027E00253603 /* Debug */,
+				20C08F7F1AFF027E00253603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		20DD20BB1A10238B0036F12E /* Build configuration list for PBXProject "Lights" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
