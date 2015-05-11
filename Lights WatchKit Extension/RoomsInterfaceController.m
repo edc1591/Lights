@@ -8,6 +8,8 @@
 
 #import "RoomsInterfaceController.h"
 
+#import "HomesInterfaceController.h"
+
 #import "RoomTableRowController.h"
 
 #import "HomesController.h"
@@ -23,6 +25,10 @@
 
 @property (nonatomic) RoomsViewModel *viewModel;
 
+/// Sends HomeController objects.
+/// Never errors. Completes on dealloc.
+@property (nonatomic) RACSubject *homeControllersSubject;
+
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *homeLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceTable *tableView;
 
@@ -30,15 +36,23 @@
 
 @implementation RoomsInterfaceController
 
+- (void)dealloc {
+    [self.homeControllersSubject sendCompleted];
+}
+
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
-    self.homesController = [[HomesController alloc] init];
+    [self addMenuItemWithItemIcon:WKMenuItemIconRepeat title:NSLocalizedString(@"Switch Homes", nil) action:@selector(switchHomes)];
     
+    self.homeControllersSubject = [RACSubject subject];
+    
+    self.homesController = [[HomesController alloc] init];
+        
     @weakify(self);
     
     RAC(self, homeController) =
-        [RACObserve(self.homesController, homes)
+        [[RACObserve(self.homesController, homes)
             map:^HomeController *(NSArray *homes) {
                 HMHome *home = [homes firstObject];
                 if (home != nil) {
@@ -46,7 +60,8 @@
                 } else {
                     return nil;
                 }
-            }];
+            }]
+            merge:self.homeControllersSubject];
     
     RAC(self, viewModel) =
         [[RACObserve(self, homeController)
@@ -70,14 +85,10 @@
         }];
 }
 
-- (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
-    [super willActivate];
-}
+#pragma mark Interface Actions
 
-- (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
-    [super didDeactivate];
+- (void)switchHomes {
+    [self presentControllerWithName:NSStringFromClass([HomesInterfaceController class]) context:RACTuplePack(self.homesController, self.homeControllersSubject)];
 }
 
 #pragma mark Segues

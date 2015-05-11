@@ -84,6 +84,33 @@
             </objects>
             <point key="canvasLocation" x="636" y="341"/>
         </scene>
+        <!--HomesInterfaceController-->
+        <scene sceneID="JCp-l3-cTZ">
+            <objects>
+                <controller identifier="HomesInterfaceController" id="BSf-aV-aOu" customClass="HomesInterfaceController">
+                    <items>
+                        <table alignment="left" id="9zj-dB-ZN6">
+                            <items>
+                                <tableRow identifier="HomeTableRowController" id="v7m-Ts-n49" customClass="HomeTableRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="2Ho-HQ-7rb">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="ZT7-GT-gZb"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="ZT7-GT-gZb" id="1ma-zG-fex"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="9zj-dB-ZN6" id="CRK-aO-qLY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="167" y="69"/>
+        </scene>
         <!--Rooms Interface Controller-->
         <scene sceneID="a1f-tn-xDc">
             <objects>

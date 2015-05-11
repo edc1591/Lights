@@ -41,6 +41,10 @@
 		20C08F9E1AFFB49200253603 /* AccessoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21171A1059F30036F12E /* AccessoriesViewModel.m */; };
 		20C08F9F1AFFB49200253603 /* AccessoriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD211A1A105A450036F12E /* AccessoriesController.m */; };
 		20C08FA21AFFB6A000253603 /* AccessoryInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08FA11AFFB6A000253603 /* AccessoryInterfaceController.m */; };
+		20C08FA81B00464C00253603 /* HomesInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08FA71B00464C00253603 /* HomesInterfaceController.m */; };
+		20C08FAB1B0046DC00253603 /* HomeTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C08FAA1B0046DC00253603 /* HomeTableRowController.m */; };
+		20C08FAC1B0046F200253603 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD210A1A102E540036F12E /* HomeViewModel.m */; };
+		20C08FAD1B0046FA00253603 /* HomesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD21011A1026100036F12E /* HomesViewModel.m */; };
 		20DD20C61A10238B0036F12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C51A10238B0036F12E /* main.m */; };
 		20DD20C91A10238B0036F12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DD20C81A10238B0036F12E /* AppDelegate.m */; };
 		20DD20D11A10238B0036F12E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DD20D01A10238B0036F12E /* Images.xcassets */; };
@@ -147,6 +151,10 @@
 		20C08F9B1AFFB33500253603 /* RoomTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomTableRowController.m; sourceTree = "<group>"; };
 		20C08FA01AFFB6A000253603 /* AccessoryInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryInterfaceController.h; sourceTree = "<group>"; };
 		20C08FA11AFFB6A000253603 /* AccessoryInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryInterfaceController.m; sourceTree = "<group>"; };
+		20C08FA61B00464C00253603 /* HomesInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomesInterfaceController.h; sourceTree = "<group>"; };
+		20C08FA71B00464C00253603 /* HomesInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomesInterfaceController.m; sourceTree = "<group>"; };
+		20C08FA91B0046DC00253603 /* HomeTableRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableRowController.h; sourceTree = "<group>"; };
+		20C08FAA1B0046DC00253603 /* HomeTableRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableRowController.m; sourceTree = "<group>"; };
 		20DD20C01A10238B0036F12E /* Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DD20C41A10238B0036F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DD20C51A10238B0036F12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -247,12 +255,16 @@
 			isa = PBXGroup;
 			children = (
 				20C08F961AFF18CD00253603 /* Lights WatchKit Extension.entitlements */,
+				20C08FA61B00464C00253603 /* HomesInterfaceController.h */,
+				20C08FA71B00464C00253603 /* HomesInterfaceController.m */,
 				20C08F971AFFB2E900253603 /* RoomsInterfaceController.h */,
 				20C08F981AFFB2E900253603 /* RoomsInterfaceController.m */,
 				20C08F651AFF027E00253603 /* RoomInterfaceController.h */,
 				20C08F661AFF027E00253603 /* RoomInterfaceController.m */,
 				20C08FA01AFFB6A000253603 /* AccessoryInterfaceController.h */,
 				20C08FA11AFFB6A000253603 /* AccessoryInterfaceController.m */,
+				20C08FA91B0046DC00253603 /* HomeTableRowController.h */,
+				20C08FAA1B0046DC00253603 /* HomeTableRowController.m */,
 				20C08F9A1AFFB33500253603 /* RoomTableRowController.h */,
 				20C08F9B1AFFB33500253603 /* RoomTableRowController.m */,
 				20C08F911AFF147D00253603 /* AccessoryTableRowController.h */,
@@ -723,6 +735,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C08FAD1B0046FA00253603 /* HomesViewModel.m in Sources */,
+				20C08FAC1B0046F200253603 /* HomeViewModel.m in Sources */,
 				20C08F9E1AFFB49200253603 /* AccessoriesViewModel.m in Sources */,
 				20C08F9F1AFFB49200253603 /* AccessoriesController.m in Sources */,
 				20C08F9D1AFFB3AC00253603 /* RoomsViewModel.m in Sources */,
@@ -731,6 +745,7 @@
 				20C08F8F1AFF130000253603 /* AccessoryViewModel.m in Sources */,
 				20C08FA21AFFB6A000253603 /* AccessoryInterfaceController.m in Sources */,
 				20C08F8E1AFF12EB00253603 /* RoomViewModel.m in Sources */,
+				20C08FA81B00464C00253603 /* HomesInterfaceController.m in Sources */,
 				20C08F9C1AFFB33500253603 /* RoomTableRowController.m in Sources */,
 				20C08F861AFF111100253603 /* HomesController.m in Sources */,
 				20C08F871AFF111100253603 /* HomeController.m in Sources */,
@@ -738,6 +753,7 @@
 				20C08F8A1AFF111100253603 /* HMHome+RACSignalSupport.m in Sources */,
 				20C08F931AFF147D00253603 /* AccessoryTableRowController.m in Sources */,
 				20C08F8B1AFF111100253603 /* HMAccessory+RACSignalSupport.m in Sources */,
+				20C08FAB1B0046DC00253603 /* HomeTableRowController.m in Sources */,
 				20C08F8C1AFF111100253603 /* HMCharacteristic+RACSignalSupport.m in Sources */,
 				20C08F8D1AFF111100253603 /* NSError+HomeKitExtensions.m in Sources */,
 				20C08F6A1AFF027E00253603 /* NotificationController.m in Sources */,
